@@ -1,0 +1,75 @@
+/* styles.css */
+.container {
+    position: relative;  /* Necesario para el posicionamiento del botón */
+    width: 100vw;        /* Ancho completo de la ventana */
+    height: 100vh;       /* Altura completa de la ventana */
+    margin: 0;           /* Sin margen */
+    padding: 0;          /* Sin relleno */
+    overflow: hidden;    /* Ocultar cualquier desbordamiento */
+  }
+  
+  .button4{
+    margin-right: 30px;
+  }
+
+  .header{
+    position: absolute;
+    height: 10vh;
+    width: 100%;
+    top:0;
+    background-color: transparent;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    width: 20%;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .logo{
+    margin-left: 30px;
+    height: 70px;
+    width: 95px;
+  }
+
+  .seccions{
+    width: 60%;
+    background-color: transparent;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact{
+    width: 20%;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .body{
+    position: absolute;
+    height: 81vh;
+    width: 100%;
+    top: 10%;
+    background-color: transparent;
+    z-index: 10;
+  }
+
+
+  

@@ -1,0 +1,82 @@
+button {
+  border: none;
+}
+
+.bt-header:focus {
+  outline: none;
+}
+
+.bt-header{
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 0.5s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    margin: 0px 10px 0px 10px;
+    z-index: 10;
+
+}
+
+.bt-activo{
+  transition: border 0s ease;
+  border: 2px solid white;
+
+}
+
+.bt-inactivo{
+  transition: border 0s ease;
+  border: none;
+}
+
+.bt-inactivo:hover{
+  border: none;
+}
+
+.bt-header::after {
+  z-index: 10;
+  content: "";
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s;
+  transform-origin: center;
+  border: none;
+  outline: none;
+}
+
+.bt-header::before {
+  z-index: 10;
+  content: "";
+  transform-origin: center;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+}
+
+.bt-header:hover::before, .bt-header:hover::after {
+  transform: scale(0);
+}
+
+.bt-header:hover {
+  box-shadow: inset 0px 0px 25px #7f00b2;
+  border: 2px transparent white;
+}
+
+
+@font-face {
+  font-family: 'Anurati';
+  src: url('../../public/fonts/Anurati-Regular.otf') format('opentype');
+}
+
+.bt-header-text{
+  font-family: 'Anurati';
+  font-size: large;
+}

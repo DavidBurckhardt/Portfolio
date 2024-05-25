@@ -1,0 +1,24 @@
+  
+.footer{
+    position: absolute;
+    height: 9vh;
+    width: 100%;
+    top: 90%;
+    background-color: transparent;
+    z-index: 10;
+    margin: 0;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+  
+  .socialmedia{
+    position: relative;
+    z-index: 10;
+    margin: 0; 
+    background-color: transparent;
+    height: 100%;
+    width: 25%;
+  }
