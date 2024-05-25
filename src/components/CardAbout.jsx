@@ -1,6 +1,6 @@
-import "../styles/Card.css"
+import "../styles/CardAbout.css"
 
-export default function Card({children}){
+export default function CardAbout({children}){
     return(
         <div className="card">
             <div className="card_title__container">

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
-import Card from "./components/Card"
+import CardAbout from "./components/CardAbout"
 import "./styles.css";
 import "./styles/Button.css";
 import "./styles/ContactMe.css";
@@ -136,6 +136,7 @@ export default function App() {
         setActive([false,false,false,true])
         setScrollCount(3)
     }
+    
 
     return (
         <div className='container'>
@@ -187,7 +188,7 @@ export default function App() {
                         <aside className={`rightSide ${active[1]? '' : 'about-animation-down animation-delay-right'}`}>
                             <header className='title-right'><span className='title-right-text'>ABOUT ME</span></header>
                             <article className='education'>
-                                <Card><h1 className='article-title'>EDUCATION</h1></Card>
+                                <CardAbout><h1 className='article-title'>EDUCATION</h1></CardAbout>
                                 <div className='info-about'>
                                     <h2 className='info-about-title'>SYSTEMS ENGINEER | 2020 - PRESENTE</h2>
                                     <p className='info-about-subtitle'>
@@ -197,7 +198,7 @@ export default function App() {
                                 </div>
                             </article>
                             <article className='experience'>
-                                <Card><h1 className='article-title'>EXPERIENCE</h1></Card>
+                                <CardAbout><h1 className='article-title'>EXPERIENCE</h1></CardAbout>
                                 <div className='info-about '>
                                     <h2 className='info-about-title'>WEB DEVELOPER | 2022 | LSA + IA </h2>
                                     <p className='info-about-subtitle'>
@@ -218,7 +219,7 @@ export default function App() {
                                 </div>
                             </article>
                             <article className='language'>
-                                <Card><h1 className='article-title'>LANGUAGES</h1></Card>
+                                <CardAbout><h1 className='article-title'>LANGUAGES</h1></CardAbout>
                                 <div className='info-language'>
                                     <div className='language1'>
                                         <h2 className='info-about-title'>INGLES</h2>
@@ -238,7 +239,10 @@ export default function App() {
                     </section>
                     <section className={`proyects ${active[2]? 'proyects-animation-right' : 'proyects-animation-left'}`}>
                         <header className='proyects-title'><span className='proyects-title-text'>PROYECTS</span></header>
-                        <article className='proyects-carrousel'></article>
+                        <article className='proyects-carrousel'>
+
+                        </article>
+                        <article className='proyects-info'></article>
                     </section>
             </main>
             <footer className="footer">

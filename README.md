@@ -50,7 +50,7 @@ Ensure you have Node.js and npm installed on your machine. You can download Node
 2. **Open your browser and navigate to:**
 
     ```sh
-    http://localhost:3000
+    http://localhost:5173
     ```
 
 ## Built With
