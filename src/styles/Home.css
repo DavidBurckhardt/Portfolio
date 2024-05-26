@@ -73,7 +73,7 @@
 
 .phrase-text{
     font-family: 'Clesmont';
-    font-size: 121px;
+    font-size: 13vh;
     text-align: right;
 }
 
@@ -95,7 +95,7 @@
 
 .presentation-text{
     font-family: 'FivoSans';
-    font-size: 25px;
+    font-size: 3vh;
     text-align: left;
     text-indent: 70px;
     font-style: normal;
@@ -119,6 +119,6 @@
 
 .rol-text{
     font-family: 'Clesmont';
-    font-size: 50px;
+    font-size: 3vw;
     text-align: center;
 }

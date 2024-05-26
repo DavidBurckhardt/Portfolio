@@ -92,12 +92,19 @@
     src: url('../../public/fonts/Clesmont.ttf') format('opentype');
   }
 .data-text{
-    height: 45px;
+    height: 5vh;
     font-family: 'Clesmont';
-    font-size: 36px;
+    /* font-size: 2.25vw; */
+    font-size: calc(1.5vw + 1vh); 
     text-align: center;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
     margin: 0;
+}
+
+@media (max-width: 400px) {
+    .data-text {
+        font-size: calc(1.5vw + 1vh); /* Tamaño de la fuente más pequeño para pantallas más pequeñas */
+    }
 }
 
 .rightSide{
@@ -133,7 +140,7 @@
   }
 .title-right-text{
     font-family: 'Clesmont';
-    font-size: 117px;
+    font-size: 11vh;
     text-align: center;
 }
 
@@ -155,7 +162,7 @@
     height: 20%;
     width: 100%;
     font-family: 'Clesmont';
-    font-size: 35px;
+    font-size: 4.5vh;
     text-align: left;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
     margin: 0;
@@ -171,9 +178,10 @@
     font-family: 'Meltbrown';
     src: url('../../public/fonts/Meltbrown.ttf') format('opentype');
   }
+
 .info-about-title{
     font-family: 'Meltbrown';
-    font-size: 23px;
+    font-size: 2.5vh;
     text-align: left;
     font-style: normal;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
@@ -182,14 +190,14 @@
 
 .info-about-subtitle{
     font-family: 'Meltbrown';
-    font-size: 16px;
+    font-size: 1.7vh;
     text-align: left;
     margin: 0;
 }
 
 .info-about-text{
     font-family: 'Meltbrown';
-    font-size: 16px;
+    font-size: 1.3vh;
     text-align: left;
     margin: 0;
 }
@@ -207,7 +215,7 @@
 }
 
 .language{
-    margin-top: 4px;
+    margin-top: 1vh;
     position: relative;
     width: 100%;
     height: 15%;
