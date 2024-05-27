@@ -1,0 +1,118 @@
+.skills{
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    left: 5%;
+    top:0;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-animation-down-title{
+    transform: translateY(0); /* Establecer la posición inicial */
+    animation: visibleNOTITLE 1s forwards ease-in;
+}
+
+.skills-animation-down-hard{
+    transform: translateY(0); /* Establecer la posición inicial */
+    animation: visibleNOHARD 1s forwards ease-in;
+}
+
+.skills-animation-down-soft{
+    transform: translateY(0); /* Establecer la posición inicial */
+    animation: visibleNOSOFT 1s forwards ease-in;
+}
+
+.skills-animation-up-title{
+    transform: translateY(-100%); 
+    animation: visibleSI 0.8s forwards ease-in;
+}
+
+.skills-animation-up-hard{
+    transform: translate(150%,-200%); 
+    animation: visibleSI 0.8s forwards ease-in;
+}
+
+.skills-animation-up-soft{
+    transform: translate(150%,200%); 
+    animation: visibleSI 0.8s forwards ease-in;
+}
+
+@keyframes visibleSI {
+    to {
+        transform: translateY(0); /* Volver el elemento a su posición original */
+        opacity: 1; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes visibleNOTITLE {
+    to {
+        transform: translateY(-150%); 
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes visibleNOHARD {
+    to {
+        transform: translate(150%,-200%); 
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes visibleNOSOFT {
+    to {
+        transform: translate(150%,200%); 
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+.skills-title{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    text-align: start;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Clesmont';
+    src: url('../../public/fonts/Clesmont.ttf') format('opentype');
+  }
+
+.skills-title-text{
+    font-family: 'Clesmont';
+    font-size: 117px;
+    text-align: left;
+}
+
+.hard-skills{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    z-index: 10;
+    background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soft-skills{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    z-index: 10;
+    background-color: blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

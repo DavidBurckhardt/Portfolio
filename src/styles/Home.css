@@ -71,9 +71,9 @@
     src: url('../../public/fonts/Clesmont.ttf') format('opentype');
   }
 
-.phrase-text{
+  .phrase-text {
     font-family: 'Clesmont';
-    font-size: 13vh;
+    font-size: 13vh; /* Tamaño de fuente para dispositivos grandes */
     text-align: right;
 }
 
@@ -121,4 +121,20 @@
     font-family: 'Clesmont';
     font-size: 3vw;
     text-align: center;
+}
+
+/* Consulta de medios para dispositivos más pequeños */
+@media (max-width: 1600px) {
+    .phrase-text {
+        font-size: 95px; /* Tamaño de fuente para dispositivos medianos */
+    }
+
+    .presentation-text{
+        font-size: 22px;
+        text-indent: 70px;
+    }
+
+    .rol-text{
+        font-size: 45px;
+    }
 }

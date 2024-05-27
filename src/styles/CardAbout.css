@@ -7,7 +7,7 @@
   
     position: relative;
     width: 18vw;
-    height: 5vh; 
+    height: 6vh; 
     
   
     display: flex;
@@ -15,8 +15,7 @@
     justify-content: center;
     align-items: center;
     gap: 0rem;
-  
-    padding: 0.25rem;
+
     background-color: transparent;
     background-image: 
     radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 0.7) 0px, transparent 85%),

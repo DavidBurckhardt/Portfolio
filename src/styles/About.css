@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: 'Clesmont';
+    src: url('../../public/fonts/Clesmont.ttf') format('opentype');
+  }
+
+@font-face {
+    font-family: 'Meltbrown';
+    src: url('../../public/fonts/Meltbrown.ttf') format('opentype');
+  }
+
 .about{
     position: absolute;
     width: 90%;
@@ -87,10 +98,6 @@
     gap:0;
 }
 
-@font-face {
-    font-family: 'Clesmont';
-    src: url('../../public/fonts/Clesmont.ttf') format('opentype');
-  }
 .data-text{
     height: 5vh;
     font-family: 'Clesmont';
@@ -99,12 +106,6 @@
     text-align: center;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
     margin: 0;
-}
-
-@media (max-width: 400px) {
-    .data-text {
-        font-size: calc(1.5vw + 1vh); /* Tamaño de la fuente más pequeño para pantallas más pequeñas */
-    }
 }
 
 .rightSide{
@@ -134,13 +135,9 @@
     align-items: center;
 }
 
-@font-face {
-    font-family: 'Clesmont';
-    src: url('../../public/fonts/Clesmont.ttf') format('opentype');
-  }
 .title-right-text{
     font-family: 'Clesmont';
-    font-size: 11vh;
+    font-size: 85px;
     text-align: center;
 }
 
@@ -152,50 +149,72 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: left;
     
 }
 
+.card-title{
+    position: relative;
+    height: 50px;
+    width: 100%;
+
+}
+
 .article-title{
     position: relative;
-    height: 20%;
+    height: 100%;
     width: 100%;
     font-family: 'Clesmont';
-    font-size: 4.5vh;
-    text-align: left;
+    font-size: 33px;
+    text-align: center;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
     margin: 0;
+    padding: 0;
 }
 
 .info-about{
     position: relative;
-    height: 30%;
+    height: 55%;
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
-@font-face {
-    font-family: 'Meltbrown';
-    src: url('../../public/fonts/Meltbrown.ttf') format('opentype');
-  }
+
 
 .info-about-title{
+    position: relative;
+    width: 100%;
+    height: 40%;
+
     font-family: 'Meltbrown';
-    font-size: 2.5vh;
+    font-size: 20px;
     text-align: left;
     font-style: normal;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
-    margin: 15px 0px 2px 0px;
+    margin: 0px;
 }
 
 .info-about-subtitle{
+    position: relative;
+    width: 100%;
+    height: 50%;
+
     font-family: 'Meltbrown';
-    font-size: 1.7vh;
+    font-size: 13px;
     text-align: left;
     margin: 0;
 }
 
 .info-about-text{
+    position: relative;
+    width: 100%;
+    height: 10%;
+
     font-family: 'Meltbrown';
     font-size: 1.3vh;
     text-align: left;
@@ -210,12 +229,11 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: left;
 }
 
 .language{
-    margin-top: 1vh;
     position: relative;
     width: 100%;
     height: 15%;
@@ -224,13 +242,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 5px;
 }
 
 .info-language{
     position: relative;
-    height: 50%;
+    height: 65%;
     width: 100%;
+    background-color: transparent;
 
     display: flex;
     justify-content: center;
@@ -249,4 +271,25 @@
     height: 100%;
     width: 80%;
     background-color: transparent;
+}
+
+/* Consulta de medios para dispositivos más pequeños */
+@media (max-width: 1600px) {
+
+    .title-right-text{
+        font-size: 85px;
+    }
+
+    .article-title{
+        font-size: 33px;
+    }
+
+    .info-about-title{
+        font-size: 20px;
+    }
+
+    .info-about-subtitle{
+        font-size: 13px;
+    }
+    
 }
