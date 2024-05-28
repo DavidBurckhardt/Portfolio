@@ -9,10 +9,19 @@ import "./styles/About.css";
 import "./styles/Footer.css";
 import "./styles/Proyects.css";
 import "./styles/Skills.css";
+import "./styles/CardProyect.css";
+
 import { moverEje, rotarEje } from './utils/MoverEjes';
 import { SocialMedia } from './components/SocialMedia';
-import logo from "../public/images/logo2.png"
-import imgPersonal from "../public/images/yo2.png"
+import logo from "./assets/images/logo2.png"
+import imgPersonal from "./assets/images/yo2.png"
+import github from "./assets/icons/github.svg"
+import recipe from "./assets/icons/recipe.svg"
+import compiler from "./assets/icons/compiler.svg"
+import truck from "./assets/icons/truck.svg"
+import brain from "./assets/icons/brain.svg"
+import chatbot from "./assets/icons/chatbot.svg"
+import lemon from "./assets/icons/lemon.svg"
 
 export default function App() {
   const camera = useRef();
@@ -126,7 +135,7 @@ export default function App() {
     }
 
     const proyects = () => {
-        moveAndRotate(-464, -29, -482,15)
+        moveAndRotate(-78, 75, -71)
         setActive([false,false,true,false])
         setScrollCount(2)
     }
@@ -144,14 +153,15 @@ export default function App() {
             <Spline scene="https://prod.spline.design/RwlJrSCvQ9Olqjib/scene.splinecode" onLoad={onLoad} />
             <header className='header'>
                 <section className='title'>
-                    <img className='logo' src={logo}/>
+                    {/* <img className='logo' src={logo}/> */}
+                    <span className='title-name'>DAVID BURCKHARDT</span>
                 </section>
                 <section className='seccions'>
                     <button className={`bt-header ${active[0]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={home}>
                         <span className='bt-header-text'>HOME</span>
                     </button>
                     <button className={`bt-header ${active[1]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={aboutMe}>
-                        <span className='bt-header-text'>ABOUT  ME</span>
+                        <span className='bt-header-text'>ABOUT</span>
                     </button>
                     <button className={`bt-header ${active[2]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={proyects}>
                         <span className='bt-header-text'>PROYECTS</span>
@@ -193,7 +203,7 @@ export default function App() {
                                 <div className='info-about'>
                                     <span className='info-about-title'>SYSTEMS ENGINEER | 2020 - PRESENTE</span>
                                     <p className='info-about-subtitle'>
-                                        Universidad Nacional del Centro de la Provincia de Buenos Aires | UNICEN Promedio 9.15
+                                        Universidad Nacional del Centro de la Provincia de Buenos Aires Promedio 9.15
                                     </p>
                                 </div>
                             </article>
@@ -239,10 +249,89 @@ export default function App() {
                     </section>
                     <section className={`proyects ${active[2]? 'proyects-animation-right' : 'proyects-animation-left'}`}>
                         <header className='proyects-title'><span className='proyects-title-text'>PROYECTS</span></header>
-                        <article className='proyects-carrousel'>
+                        <div className="proyects-card">
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">RECIPE BOOK</span>
+                                        <p className="card-proyect-content">
+                                            A global culinary recipe book building with the MEAN stack, strengthening my skills in interface design, non-relational data manipulation, and RESTful API construction.
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>
+                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={recipe}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">COMPILER</span>
+                                        <p className="card-proyect-content">
+                                            A complete compiler building in C++, implementing lexical, syntactic, and semantic analysis, intermediate code generation, error handling, and optimizations
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={compiler}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">FLEET-FLOW 1.0</span>
+                                        <p className="card-proyect-content">
+                                        This project optimizes truck trip management, handles repairs, and manages vehicle and driver documentation, improving operational efficiency.
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={truck}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">IA MODEL</span>
+                                        <p className="card-proyect-content">
+                                            This device segmentation model for aneurysm treatment, trained with deep learning and the nnUNet framework, automates the process and accelerates professionals' work.
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={brain}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">MY CHATBOT</span>
+                                        <p className="card-proyect-content">
+                                        This project was developed using RASA and Python. The chatbot has been seamlessly integrated with Telegram and trained with my most common phrases and responses. It's like you're talking to me!
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={chatbot}/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="parent">
+                                <div className="card-proyect">
+                                    <div className="content-box">
+                                        <span className="card-proyect-title">HEALTH ANALYZER</span>
+                                        <p className="card-proyect-content">
+                                        This project utilizes OpenCV to process lemon images and detect both healthy and rotten parts of the fruit, designed to operate at an industrial scale. 
+                                        </p>
+                                        <span className="see-more"><img className='github-size' src={github}/></span>           
+                                    </div>
+                                    <div className="icon-box">
+                                        <img className='icon-size-proyect' src={lemon}/>
+                                    </div>
+                                </div>
+                            </div>
 
-                        </article>
-                        <article className='proyects-info'></article>
+                        </div>
                     </section>
                     <section className="skills">
                         <header className={`skills-title ${active[3]? 'skills-animation-up-title' : 'skills-animation-down-title'}`}><span className='skills-title-text'>SKILLS</span></header>

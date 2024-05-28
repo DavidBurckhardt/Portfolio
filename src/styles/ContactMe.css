@@ -1,3 +1,5 @@
+
+
 .btn-donate {
     --clr-font-main: #b043e2; /* Púrpura para el texto principal */
     --btn-bg-1: #7f00b2; /* Púrpura para el primer fondo de botón */
@@ -9,7 +11,7 @@
     min-width: 120px;
     min-height: 44px;
     font-size: var(--size, 1rem);
-    font-family: "Segoe UI", system-ui, sans-serif;
+    font-family: "Clesmont", system-ui, sans-serif;
     font-weight: 500;
     transition: 0.8s;
     background-size: 280% auto;

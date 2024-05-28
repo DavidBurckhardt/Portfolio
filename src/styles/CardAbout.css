@@ -6,8 +6,8 @@
     --primary: hsl(266, 92%, 58%);
   
     position: relative;
-    width: 18vw;
-    height: 6vh; 
+    width: 40%;
+    height: 100%; 
     
   
     display: flex;
@@ -26,6 +26,12 @@
   
   }
 
+  @media (max-width: 1600px) {
+      .card {
+        width: 18vw;
+        height: 6vh; 
+      }
+  }
 
   
   

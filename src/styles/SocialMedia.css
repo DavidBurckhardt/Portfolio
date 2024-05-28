@@ -1,6 +1,11 @@
 ul {
     list-style: none;
   }
+
+:root{
+  --btn-bg-1: #7f00b2; /* Púrpura para el primer fondo de botón */
+  --btn-bg-2: #1b004b; /* Púrpura para el segundo fondo de botón */
+}
   
   .example-2 {
     display: flex;
@@ -70,27 +75,21 @@ ul {
   
   .example-2 .icon-content a[data-social="linkedin"] .filled,
   .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
+
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
   }
   
   .example-2 .icon-content a[data-social="github"] .filled,
   .example-2 .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
+
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
   }
   .example-2 .icon-content a[data-social="instagram"] .filled,
   .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
-    );
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
   }
   .example-2 .icon-content a[data-social="youtube"] .filled,
   .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-    background-color: #ff0000;
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
   }
   

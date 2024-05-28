@@ -66,14 +66,10 @@
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }
 
-@font-face {
-    font-family: 'Clesmont';
-    src: url('../../public/fonts/Clesmont.ttf') format('opentype');
-  }
 
   .phrase-text {
     font-family: 'Clesmont';
-    font-size: 13vh; /* Tamaño de fuente para dispositivos grandes */
+    font-size: 112px; /* Tamaño de fuente para dispositivos grandes */
     text-align: right;
 }
 
