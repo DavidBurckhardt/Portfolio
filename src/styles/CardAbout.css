@@ -18,9 +18,9 @@
 
     background-color: transparent;
     background-image: 
-    radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 0.7) 0px, transparent 85%),
-    radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 0.7) 0px, transparent 85%),
-    radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 0.7) 0px, transparent 85%);
+    radial-gradient(at 0% 64%, rgba(96, 67, 250, 0.7) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, rgba(215, 67, 250, 0.7) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, rgba(156, 67, 250, 0.7) 0px, transparent 85%);
     
     border-radius: 1rem;
   

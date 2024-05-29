@@ -64,6 +64,7 @@
 
 .proyects-card{
     position: relative;
+    margin-right: 5%;
     width: 55%;
     height: 100%;
     z-index: 11;

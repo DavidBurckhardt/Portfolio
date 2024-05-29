@@ -22,6 +22,17 @@ import truck from "./assets/icons/truck.svg"
 import brain from "./assets/icons/brain.svg"
 import chatbot from "./assets/icons/chatbot.svg"
 import lemon from "./assets/icons/lemon.svg"
+import reactLogo from "./assets/icons/skills/reactLogo.svg"
+import javaLogo from "./assets/icons/skills/javaLogo.svg"
+import htmlLogo from "./assets/icons/skills/htmlLogo.svg"
+import cssLogo from "./assets/icons/skills/cssLogo.svg"
+import pythonLogo from "./assets/icons/skills/pythonLogo.svg"
+import postgreLogo from "./assets/icons/skills/postgreLogo.svg"
+import mongoLogo from "./assets/icons/skills/mongoLogo.svg"
+import jiraLogo from "./assets/icons/skills/jiraLogo.svg"
+import trelloLogo from "./assets/icons/skills/trelloLogo.svg"
+import cplusplusLogo from "./assets/icons/skills/cplusplusLogo.svg"
+
 
 export default function App() {
   const camera = useRef();
@@ -135,14 +146,14 @@ export default function App() {
     }
 
     const proyects = () => {
-        moveAndRotate(-78, 75, -71)
+        moveAndRotate(-120, 0, -80)
         setActive([false,false,true,false])
         setScrollCount(2)
     }
 
     
     const skills = () => {
-        moveAndRotate(-239, 123, 324, 0.01)
+        moveAndRotate(500, -750, 700, 0.01)
         setActive([false,false,false,true])
         setScrollCount(3)
     }
@@ -150,7 +161,7 @@ export default function App() {
 
     return (
         <div className='container'>
-            {/* <Spline scene="https://prod.spline.design/RwlJrSCvQ9Olqjib/scene.splinecode" onLoad={onLoad} /> */}
+            <Spline scene="https://prod.spline.design/RwlJrSCvQ9Olqjib/scene.splinecode" onLoad={onLoad} />
             <header className='header'>
                 <section className='title'>
                     {/* <img className='logo' src={logo}/> */}
@@ -247,6 +258,99 @@ export default function App() {
                             </article>
                         </aside>
                     </section>
+                    <section className="skills">
+                        <header className={`skills-title ${active[3]? 'skills-animation-up-title' : 'skills-animation-down-title'}`}><span className='skills-title-text'>SKILLS</span></header>
+                        <article className={`hard-skills ${active[3]? 'skills-animation-up-hard' : 'skills-animation-down-hard'}`}>
+                            <div className='hard-skills-title card-title'><CardAbout><span className='article-title'>HARD SKILLS</span></CardAbout></div>
+                            <div className='hard-skills-body'>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={reactLogo}/></div>
+                                    <span className='skill-name'>REACT</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={htmlLogo}/></div>
+                                    <span className='skill-name'>HTML</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "60%", width: "60%"}}  src={pythonLogo}/></div>
+                                    <span className='skill-name'>PYTHON</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "55%", width: "55%"}}  src={postgreLogo}/></div>
+                                    <span className='skill-name'>POSTGRESQL</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "65%"}} src={jiraLogo}/></div>
+                                    <span className='skill-name'>JIRA</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "64%", width: "80%"}} src={javaLogo}/></div>
+                                    <span className='skill-name'>JAVA</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={cssLogo}/></div>
+                                    <span className='skill-name'>CSS</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={cplusplusLogo}/></div>
+                                    <span className='skill-name'>C++</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "73%", width: "73%"}} src={mongoLogo}/></div>
+                                    <span className='skill-name'>MONGODB</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "50%", width: "50%"}} src={trelloLogo}/></div>
+                                    <span className='skill-name'>TRELLO</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article className={`soft-skills ${active[3]? 'skills-animation-up-soft' : 'skills-animation-down-soft'}`}>
+                        <div className='hard-skills-title card-title'><CardAbout><span className='article-title'>SOFT SKILLS</span></CardAbout></div>
+                            <div className='hard-skills-body'>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={reactLogo}/></div>
+                                    <span className='skill-name'>REACT</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={htmlLogo}/></div>
+                                    <span className='skill-name'>HTML</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "60%", width: "60%"}}  src={pythonLogo}/></div>
+                                    <span className='skill-name'>PYTHON</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "55%", width: "55%"}}  src={postgreLogo}/></div>
+                                    <span className='skill-name'>POSTGRESQL</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "65%"}} src={jiraLogo}/></div>
+                                    <span className='skill-name'>JIRA</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "64%", width: "80%"}} src={javaLogo}/></div>
+                                    <span className='skill-name'>JAVA</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={cssLogo}/></div>
+                                    <span className='skill-name'>CSS</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={cplusplusLogo}/></div>
+                                    <span className='skill-name'>C++</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "73%", width: "73%"}} src={mongoLogo}/></div>
+                                    <span className='skill-name'>MONGODB</span>
+                                </div>
+                                <div className='parent-skill'>
+                                    <div class="card-skill"><img style={{ height: "50%", width: "50%"}} src={trelloLogo}/></div>
+                                    <span className='skill-name'>TRELLO</span>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
                     <section className={`proyects ${active[2]? 'proyects-animation-right' : 'proyects-animation-left'}`}>
                         <header className='proyects-title'><span className='proyects-title-text'>PROYECTS</span></header>
                         <div className="proyects-card">
@@ -330,18 +434,9 @@ export default function App() {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </section>
-                    <section className="skills">
-                        <header className={`skills-title ${active[3]? 'skills-animation-up-title' : 'skills-animation-down-title'}`}><span className='skills-title-text'>SKILLS</span></header>
-                        <article className={`hard-skills ${active[3]? 'skills-animation-up-hard' : 'skills-animation-down-hard'}`}>
 
-                        </article>
-                        <article className={`soft-skills ${active[3]? 'skills-animation-up-soft' : 'skills-animation-down-soft'}`}>
-
-                        </article>
-                    </section>
             </main>
             <footer className="footer">
                 <div className='socialmedia'><SocialMedia/></div>
