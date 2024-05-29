@@ -1,0 +1,179 @@
+.contact{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    left: 30%;
+    top:0;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    text-align: center;
+
+}
+
+.contact-title-text{
+    font-family: 'Clesmont';
+    font-size: 117px;
+    
+}
+
+.contact-body{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+}
+
+.contact-animation-down-title{
+    transform: translateY(0); /* Establecer la posición inicial */
+    animation: visibleNOTITLE 1.3s forwards ease-in;
+}
+
+.contact-animation-up-title{
+    transform: translate(-150%,-150%); 
+    animation: visibleSI 1.3s forwards ease-in;
+}
+
+.contact-animation-down-body{
+    transform: translateY(0); /* Establecer la posición inicial */
+    animation: visibleNOBODY 1.3s forwards ease-in;
+}
+
+.contact-animation-up-body{
+    transform: translate(150%,150%); 
+    animation: visibleSI 1.3s forwards ease-in;
+}
+
+@keyframes visibleSI {
+    to {
+        transform: translateY(0); /* Volver el elemento a su posición original */
+        opacity: 1; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes visibleNOTITLE {
+    to {
+        transform: translate(-150%,-150%); 
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes visibleNOBODY {
+    to {
+        transform: translate(150%,150%); 
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+.container-form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+
+.info-form{
+    position: relative;
+    height: 60%;
+    justify-self: center;
+    align-self: center;
+}
+
+.container-form h2{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 35px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    font-family: 'Clesmont';
+    
+}
+.container-form p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-family: 'Clesmont';
+    text-align: justify;
+}
+
+.contact-data{
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icon-data{
+    position: relative;
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-data-img{
+    position: relative;
+}
+
+.container-form span{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-family: 'Clesmont';
+}
+
+.container-form form .campo, textarea{
+    position: relative;
+    width: 100%;
+    padding: 19px 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    outline: 0px;
+    box-shadow: inset 0 0 9px #6043FA, inset 0 0 18px #D743FA, inset 0 0 25px #9C43FA;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: transparent;
+    font-family: 'Clesmont';
+}
+
+.container-form form .campo{
+    position: relative;
+    width: 100%;
+}
+
+.container-form form textarea{
+
+    min-width: 530px;
+    min-height: 140px;
+
+}
+
+.campo::placeholder {
+    color: white; /* Cambia el color del texto del placeholder */
+    font-style: italic; /* Aplica un estilo en cursiva */
+    opacity: 0.7; /* Asegúrate de que la opacidad esté al máximo */
+    font-family: 'Clesmont';
+}

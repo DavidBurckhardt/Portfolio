@@ -24,10 +24,6 @@
     padding: 0;          /* Sin relleno */
     overflow: hidden;    /* Ocultar cualquier desbordamiento */
   }
-  
-  .button4{
-    margin-right: 30px;
-  }
 
   .header{
     position: absolute;
@@ -76,7 +72,7 @@
     justify-content: center;
   }
 
-  .contact{
+  .getCv{
     width: 30%;
     position: relative;
     height: 100%;
@@ -84,6 +80,30 @@
     display: flex;
     justify-content: right;
     align-items: center;
+  }
+
+  .button-CV{
+    margin-right: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cv-text,
+  .cv-text:visited,
+  .cv-text:hover,
+  .cv-text:active {
+      text-decoration: none; /* Elimina el subrayado */
+      color: inherit; /* Usa el color del elemento padre */
+      font-size: 17px;
+    }
+
+  .cv-img{
+    height: 28px;
+    width: 28px;
+    margin-bottom: 5px;
   }
 
   .body{

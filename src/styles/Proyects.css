@@ -1,8 +1,8 @@
 .proyects{
     position: absolute;
-    width: 96%;
+    width: 100%;
     height: 100%;
-    left: 2%;
+    left: 0%;
     top:0;
     background-color: transparent;
 
@@ -19,7 +19,17 @@
 
 .proyects-animation-right {
     transform: translateX(100%);
-    animation: moveRightProyect 1s forwards ease-in;
+    animation: moveRightProyect 1.3s forwards ease-in;
+}
+
+.proyects-animation-right-title {
+    transform: translateX(-150%);
+    animation: moveRightProyect 1.3s forwards ease-in;
+}
+
+.proyects-animation-left-title {
+    transform: translateX(0%);
+    animation: moveLeftProyectTitle 1s forwards ease-in;
 }
 
 @keyframes moveRightProyect {
@@ -31,7 +41,14 @@
 
 @keyframes moveLeftProyect {
     to {
-        transform: translateY(-150%); /* Mover el elemento hacia la izquierda */
+        transform: translateX(150%); /* Mover el elemento hacia la izquierda */
+        opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+    }
+}
+
+@keyframes moveLeftProyectTitle {
+    to {
+        transform: translateX(-150%); /* Mover el elemento hacia la izquierda */
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
@@ -48,23 +65,21 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    top: 84%;
 }
 
 .proyects-title-text{
     position: relative;
     width: 100%;
     height: 100%;
-    writing-mode: vertical-rl; /* Escritura vertical de derecha a izquierda */
-    text-orientation: upright;
-    letter-spacing: -20px;
     font-family: 'Clesmont';
-    font-size: 117px;
+    font-size: 110px;
     text-align: center;
 }
 
 .proyects-card{
     position: relative;
-    margin-right: 5%;
+    margin-right: 3%;
     width: 55%;
     height: 100%;
     z-index: 11;

@@ -2,7 +2,7 @@
     position: absolute;
     width: 40%;
     height: 100%;
-    left: 5%;
+    left: 6%;
     top:0;
     background-color: transparent;
 
@@ -28,18 +28,18 @@
 }
 
 .skills-animation-up-title{
-    transform: translateY(-100%); 
-    animation: visibleSI 0.8s forwards ease-in;
+    transform: translate(-150%,150%); 
+    animation: visibleSI 1.3s forwards ease-in;
 }
 
 .skills-animation-up-hard{
     transform: translate(150%,-200%); 
-    animation: visibleSI 0.8s forwards ease-in;
+    animation: visibleSI 1.3s forwards ease-in;
 }
 
 .skills-animation-up-soft{
     transform: translate(150%,200%); 
-    animation: visibleSI 0.8s forwards ease-in;
+    animation: visibleSI 1.3s forwards ease-in;
 }
 
 @keyframes visibleSI {
@@ -51,7 +51,7 @@
 
 @keyframes visibleNOTITLE {
     to {
-        transform: translateY(-150%); 
+        transform: translate(-150%,150%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
@@ -72,12 +72,10 @@
 
 .skills-title{
     position: absolute;
-    writing-mode: vertical-rl; /* Escritura vertical de derecha a izquierda */
-    text-orientation: upright;
-    text-align: start;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    top: 70%;
+    left: 10%;
 
-    left: 50vw;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -86,13 +84,14 @@
 .skills-title-text{
     font-family: 'Clesmont';
     font-size: 117px;
-    text-align: left;
+    text-align: center;
 }
 
 .hard-skills{
     position: relative;
     width: 100%;
     height: 50%;
+    margin-left: 10%;
     z-index: 10;
     background-color: transparent;
 
@@ -125,7 +124,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 0px;
+    padding: 10px;
     justify-self: center; /* Centra horizontalmente dentro de la celda */
     align-self: center; /* Centra verticalmente dentro de la celda */
     background-color: transparent;
@@ -178,6 +177,7 @@
 .skill-name{
     font-family: 'Clesmont';
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
 }
 
 
@@ -187,6 +187,7 @@
     height: 50%;
     z-index: 10;
     background-color: transparent;
+    margin-left: 100%;
 
     display: flex;
     flex-direction: column;
@@ -199,8 +200,24 @@
     height: 14%;
     width: 100%;
     background-color: transparent;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
+.soft-skills-body{
+    position: relative;
+    height: 70%;
+    width: 66%;
+    margin-left: 36%;
+    background-color: transparent;
+    margin-top: 3%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+}
 
 
 .title-name{
