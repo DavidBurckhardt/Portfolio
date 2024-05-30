@@ -119,14 +119,15 @@
 
 @media (max-width: 1600px) {
   .card-proyect {
-    padding-top: 45px;
     width: 250px; /* Adjust as needed */
-    height: 90%;
+    height: 285px;
+    padding: 0;
   }
 
   .content-box {
     padding: 40px 25px 25px 25px;
     border-radius: 0.5rem;
+    margin-top: 45px;
   }
 
   .content-box .card-proyect-title {

@@ -212,6 +212,8 @@ export default function App() {
             console.error('FAILED...', error);
             alert('Error enviando el email');
         });
+
+        setFormData(null);
     };
     
 
