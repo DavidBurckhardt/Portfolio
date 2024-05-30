@@ -324,43 +324,43 @@ export default function App() {
                             <div className='hard-skills-title card-title'><CardAbout><span className='article-title'>HARD SKILLS</span></CardAbout></div>
                             <div className='hard-skills-body'>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={reactLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "70%", width: "70%"}} src={reactLogo}/></div>
                                     <span className='skill-name'>REACT</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={htmlLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "65%", width: "55%"}} src={htmlLogo}/></div>
                                     <span className='skill-name'>HTML</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "60%", width: "60%"}}  src={pythonLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "60%", width: "60%"}}  src={pythonLogo}/></div>
                                     <span className='skill-name'>PYTHON</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "55%", width: "55%"}}  src={postgreLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "55%", width: "55%"}}  src={postgreLogo}/></div>
                                     <span className='skill-name'>POSTGRESQL</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "65%", width: "65%"}} src={jiraLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "65%", width: "65%"}} src={jiraLogo}/></div>
                                     <span className='skill-name'>JIRA</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "64%", width: "80%"}} src={javaLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "64%", width: "80%"}} src={javaLogo}/></div>
                                     <span className='skill-name'>JAVA</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={cssLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "65%", width: "55%"}} src={cssLogo}/></div>
                                     <span className='skill-name'>CSS</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "70%", width: "70%"}} src={cplusplusLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "70%", width: "70%"}} src={cplusplusLogo}/></div>
                                     <span className='skill-name'>C++</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "73%", width: "73%"}} src={mongoLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "73%", width: "73%"}} src={mongoLogo}/></div>
                                     <span className='skill-name'>MONGODB</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "50%", width: "50%"}} src={trelloLogo}/></div>
+                                    <div className="card-skill"><img style={{ height: "50%", width: "50%"}} src={trelloLogo}/></div>
                                     <span className='skill-name'>TRELLO</span>
                                 </div>
                             </div>
@@ -369,27 +369,27 @@ export default function App() {
                         <div className='soft-skills-title card-title'><CardAbout><span className='article-title'>SOFT SKILLS</span></CardAbout></div>
                             <div className='soft-skills-body'>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "60%", width: "60%"}} src={responsability}/></div>
+                                    <div className="card-skill"><img style={{ height: "60%", width: "60%"}} src={responsability}/></div>
                                     <span className='skill-name'>RESPONSABILITY</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "65%", width: "55%"}} src={teamwork}/></div>
+                                    <div className="card-skill"><img style={{ height: "65%", width: "55%"}} src={teamwork}/></div>
                                     <span className='skill-name'>TEAMWORK</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "55%", width: "55%"}}  src={adaptability}/></div>
+                                    <div className="card-skill"><img style={{ height: "55%", width: "55%"}}  src={adaptability}/></div>
                                     <span className='skill-name'>ADAPTABILITY</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "50%", width: "50%"}}  src={communication}/></div>
+                                    <div className="card-skill"><img style={{ height: "50%", width: "50%"}}  src={communication}/></div>
                                     <span className='skill-name'>COMMUNICATION</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "55%", width: "55%"}} src={problemSolution}/></div>
+                                    <div className="card-skill"><img style={{ height: "55%", width: "55%"}} src={problemSolution}/></div>
                                     <span className='skill-name'>PROBLEM RESOLUTION</span>
                                 </div>
                                 <div className='parent-skill'>
-                                    <div class="card-skill"><img style={{ height: "60%", width: "60%"}} src={timemanagment}/></div>
+                                    <div className="card-skill"><img style={{ height: "60%", width: "60%"}} src={timemanagment}/></div>
                                     <span className='skill-name'>TIME MANAGEMENT</span>
                                 </div>
                             </div>

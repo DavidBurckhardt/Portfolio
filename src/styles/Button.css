@@ -27,7 +27,11 @@ button {
 .bt-activo{
   transition: border 0s ease;
   border: 2px solid white;
+}
 
+.bt-activo:hover{
+  transition: border 0s ease;
+  border: 2px solid white;
 }
 
 .bt-inactivo{
@@ -40,25 +44,27 @@ button {
 }
 
 .bt-header::after {
-  z-index: 10;
   content: "";
-  position: relative;
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
   background-color: transparent;
-  transition: 0.3s;
+  transition: 0.5s;
   transform-origin: center;
-  border: none;
-  outline: none;
 }
 
 .bt-header::before {
-  z-index: 10;
   content: "";
   transform-origin: center;
-  position: relative;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
   background-color: transparent;
-  transition: 0.3s;
-  border: none;
-  outline: none;
+  transition: 0.5s;
 }
 
 .bt-header:hover::before, .bt-header:hover::after {
@@ -67,13 +73,6 @@ button {
 
 .bt-header:hover {
   box-shadow: inset 0px 0px 25px #7f00b2;
-  border: 2px transparent white;
-}
-
-
-@font-face {
-  font-family: 'Anurati';
-  src: url('../../public/fonts/Anurati-Regular.otf') format('opentype');
 }
 
 .bt-header-text{

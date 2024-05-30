@@ -14,8 +14,6 @@
   src: url('./assets/fonts/Meltbrown.ttf') format('opentype');
 }
 
-
-
 .container {
     position: relative;  /* Necesario para el posicionamiento del botón */
     width: 100vw;        /* Ancho completo de la ventana */
