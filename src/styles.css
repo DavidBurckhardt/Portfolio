@@ -14,110 +14,37 @@
   src: url('./assets/fonts/Meltbrown.ttf') format('opentype');
 }
 
+.portfolio{
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
 .container {
-    position: relative;  /* Necesario para el posicionamiento del botón */
-    width: 100vw;        /* Ancho completo de la ventana */
-    height: 100vh;       /* Altura completa de la ventana */
-    margin: 0;           /* Sin margen */
-    padding: 0;          /* Sin relleno */
-    overflow: hidden;    /* Ocultar cualquier desbordamiento */
-  }
-
-  .header{
-    position: absolute;
-    height: 10vh;
-    width: 100%;
-    top:0;
-    background-color: transparent;
-    z-index: 10;
-
+    position: absolute;  
+    width: 100vw;        
+    height: 100vh;       
+    margin: 0;           
+    padding: 0; 
+    top:0; 
+    left: 0;        
+    overflow: hidden; 
+    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .title{
-    width: 30%;
-    position: relative;
-    height: 100%;
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
-
-  .logo{
-    margin-left: 2vw;
-    height: 7.78vh;
-    width: 5.94vw;
-  }
-
-  .title-name{
-    font-family: 'Clesmont';
-    margin-left: 2vw;
-    font-size: 30px;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
-  }
-
-  .seccions{
-    width: 40%;
-    background-color: transparent;
-    position: relative;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .getCv{
-    width: 30%;
-    position: relative;
-    height: 100%;
-
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-
-  .button-CV{
-    margin-right: 30px;
-
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-  }
-
-  .cv-text,
-  .cv-text:visited,
-  .cv-text:hover,
-  .cv-text:active {
-      text-decoration: none; /* Elimina el subrayado */
-      color: inherit; /* Usa el color del elemento padre */
-      font-size: 17px;
-    }
-
-  .cv-img{
-    height: 28px;
-    width: 28px;
-    margin-bottom: 5px;
   }
 
   .body{
-    position: absolute;
-    height: 81vh;
+    position: relative;
+    height: 81%;
     width: 100%;
-    top: 10%;
-    background-color: transparent;
-    z-index: 10;
+    z-index: 1;
   }
 
-
-  @media (max-width: 1600px) {
-    .title-name{
-      font-size: 22px;
-    }
+@media (max-width: 1600px) {
+  .scene{
+    zoom: 100%;
   }
-
-  
+}

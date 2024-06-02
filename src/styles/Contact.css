@@ -181,12 +181,20 @@
 @media (max-width: 1600px) {
     .contact{
         width: 68%;
-        left: 25%;
+        left: 27%;
+    }
+
+    .info-form{
+        width: 90%;
     }
 
     .contact-title-text{
         font-family: 'Clesmont';
         font-size: 95px;    
+    }
+
+    .container-form{
+        grid-gap: 10px;
     }
 
     .container-form h2{
@@ -210,7 +218,7 @@
 
     .container-form form textarea{
 
-        min-width: 400;
+        min-width: 400px;
         min-height: 100px;
     
     }

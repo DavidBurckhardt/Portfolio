@@ -221,6 +221,15 @@
 }
 
   @media (max-width: 1600px) {
+
+    .skills{
+        left: 0%;
+    }
+
+    .hard-skills{
+        margin-left: 37%;
+    }
+
     .hard-skills-title{
         margin-left: 5%;
     }

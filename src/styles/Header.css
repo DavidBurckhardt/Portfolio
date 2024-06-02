@@ -1,0 +1,112 @@
+.header{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    z-index: 10;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title{
+    width: 30%;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+.title-name{
+    font-family: 'Clesmont';
+    margin-left: 2vw;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+  }
+
+.seccions{
+    width: 40%;
+    background-color: transparent;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .getCv{
+    width: 30%;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .button-CV{
+    margin-right: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+.cv-text,
+.cv-text:visited,
+.cv-text:hover,
+.cv-text:active {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color del elemento padre */
+    font-size: 17px;
+  }
+
+.cv-img{
+  height: 28px;
+  width: 28px;
+  margin-bottom: 5px;
+}
+
+.burguer-menu{
+  display: none;
+}
+
+@media (max-width: 1600px) {
+    .title-name{
+      font-size: 22px;
+    }
+  }
+
+@media (max-width: 800px) {
+    .seccions{
+      display: none;
+    }
+
+    .getCv{
+      display: none;
+    }
+
+    .title{
+      width: 50%;
+    }
+
+    .title-name{
+      font-size: 18px;
+      margin-left: 4vw;
+    }
+
+    .burguer-menu{
+      display: none;
+      position: relative;
+      width: 50%;
+      height: 100%;
+  
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+}
