@@ -74,12 +74,12 @@
     flex-wrap: wrap;
 
     text-shadow: 
-    1px 1px 0px #bbb, 
-    2px 2px 0px #bbb, 
-    3px 3px 0px #bbb, 
-    4px 4px 0px #bbb, 
-    5px 5px 0px #bbb, 
-    0px 0px 10px rgba(255, 255, 255, 0.9); /* Brillo sombreado */
+    1px 1px 0px #ccc, 
+    2px 2px 0px #ccc, 
+    3px 3px 0px #ccc, 
+    4px 4px 0px #ccc, 
+    5px 5px 0px #ccc, 
+    0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
 
 }
 

@@ -6,100 +6,42 @@ import download from "../assets/icons/download.svg"
 
 export default function Header(props){
 
-    const {active, setActive, camera, moveAndRotate} = props;
+    const {active, setActive, camera, moveAndRotate, homeRef, aboutRef, proyectsRef, skillsRef, contactRef} = props;
 
-  
-      function getPosition() {
-          console.log(camera.current)
-        console.log(camera.current.position); // Verificar la cámara
-        console.log(camera.current.rotation); // Verificar la cámara
-    }
-  
-    //   useEffect(() => {
-    //     const handleScroll = (event) => {
-    //       // Si el desplazamiento está deshabilitado, sal del manejador de eventos
-    //       if (!scrollEnabled) return;
-  
-    //       // Verifica la dirección del scroll (hacia arriba o hacia abajo)
-    //       const deltaY = event.deltaY;
-    //       if (deltaY > 0 && scrollCount == 4){
-    //           home();
-    //           setScrollCount(0);
-    //           disableScrollTemporarily();
-    //       } else if (deltaY > 0 && scrollCount == 3){
-    //           contact();
-    //           setScrollCount(scrollCount + 1);
-    //           disableScrollTemporarily();
-    //       } else if (deltaY > 0 && scrollCount == 2){
-    //           skills();
-    //           setScrollCount(scrollCount + 1);
-    //           disableScrollTemporarily();
-    //       } else if (deltaY > 0 && scrollCount == 1){
-    //           proyects();
-    //           setScrollCount(scrollCount + 1);
-    //           disableScrollTemporarily();
-    //       }else if (deltaY > 0 && scrollCount == 0) {
-    //         aboutMe();
-    //         setScrollCount(scrollCount + 1);
-    //         disableScrollTemporarily();
-    //       } else if (deltaY < 0 && scrollCount == 1) {
-    //         home();
-    //         setScrollCount(scrollCount - 1);
-    //         disableScrollTemporarily();
-    //       }else if (deltaY < 0 && scrollCount == 2) {
-    //           aboutMe();
-    //           setScrollCount(scrollCount - 1);
-    //           disableScrollTemporarily();
-    //       }else if (deltaY < 0 && scrollCount == 3) {
-    //           proyects();
-    //           setScrollCount(scrollCount - 1);
-    //           disableScrollTemporarily();
-    //       }else if (deltaY < 0 && scrollCount == 4) {
-    //           skills();
-    //           setScrollCount(scrollCount - 1);
-    //           disableScrollTemporarily();
-    //       }else if (deltaY < 0 && scrollCount == 0) {
-    //           contact();
-    //           setScrollCount(4);
-    //           disableScrollTemporarily();
-    //       }
-          
-    //     };
-  
-    //     // Agrega el evento de desplazamiento del mouse
-    //     window.addEventListener('wheel', handleScroll);
-  
-    //     // Limpia el evento cuando el componente se desmonta
-    //     return () => {
-    //       window.removeEventListener('wheel', handleScroll);
-    //     };
-    //   }, [scrollCount, scrollEnabled]); // Escucha cambios en scrollCount y scrollEnabled
+    const scrollToAbout = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const home = () => {
         moveAndRotate(-164, 83, 342, 0.01)
         setActive([true,false,false,false,false])
-        handleScroll(0)
+        scrollToAbout(homeRef)
     }
 
     const aboutMe = () => {
-        moveAndRotate(250, 22, -266, 9)
+        moveAndRotate(416, 96, -42, 0.01)
         setActive([false,true,false,false,false])
-        handleScroll(100)
+        scrollToAbout(aboutRef)
     }
   
       const proyects = () => {
-          moveAndRotate(-208, -33, -85)
+          moveAndRotate(-208, -33, -85,0.01)
           setActive([false,false,true,false,false])
+          scrollToAbout(proyectsRef)
       }
   
       const skills = () => {
-          moveAndRotate(33, -1, 238, 0.01)
+          moveAndRotate(74, 41, 278, 0.01)
           setActive([false,false,false,true,false])
+          scrollToAbout(skillsRef)
       }
   
       const contact = () => {
-          moveAndRotate(-315, -10, -30, 0.01)
+          moveAndRotate(165, 204, -122, 0.01)
           setActive([false,false,false,false,true])
+          scrollToAbout(contactRef)
       }
 
       
@@ -125,9 +67,6 @@ export default function Header(props){
             <button className={`bt-header ${active[4]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={contact}>
                 <span className='bt-header-text'>CONTACT</span>
             </button>
-            {/* <button className='bt-header' type="button" onClick={getPosition}>
-                GET POSITION
-            </button> */}
         </section>
         <section className='getCv'>
             <button className='btn-getcv button-CV'>

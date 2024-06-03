@@ -17,17 +17,6 @@ export default function App() {
 
     const camera = useRef();
     const [active, setActive] = useState([true, false, false, false, false]);
-    const [scrollCount, setScrollCount] = useState(0); // Variable de estado para llevar un registro del número de scrolls
-
-    useEffect(() => {
-        const home = () => {
-            moveAndRotate(-164, 83, 342, 0.01)
-            setActive([true,false,false,false,false])
-        }
-
-        
-
-    },[])
 
     const [homeRef,isHome] = useIntersection({
         threshold: 0.6,
@@ -49,15 +38,15 @@ export default function App() {
         threshold: 0.6,
     });
 
+    const home = () => {
+        moveAndRotate(-164, 83, 342, 0.01)
+        setActive([true,false,false,false,false])
+    }
+
     useEffect(() => {
         const home = () => {
             moveAndRotate(-164, 83, 342, 0.01)
             setActive([true,false,false,false,false])
-        }
-
-        const aboutMe = () => {
-            moveAndRotate(250, 22, -266, 0.01)
-            setActive([false,true,false,false,false])
         }
 
         if(isHome){
@@ -114,7 +103,7 @@ export default function App() {
         }
 
         const skills = () => {
-            moveAndRotate(33, -1, 238, 0.01)
+            moveAndRotate(74, 41, 278, 0.01)
             setActive([false,false,false,true,false])
         }
 
@@ -129,12 +118,12 @@ export default function App() {
     useEffect(() => {
   
         const contact = () => {
-            moveAndRotate(-315, -10, -30, 0.01)
+            moveAndRotate(165, 204, -122, 0.01)
             setActive([false,false,false,false,true])
         }
 
         const skills = () => {
-            moveAndRotate(33, -1, 238, 0.01)
+            moveAndRotate(74, 41, 278, 0.01)
             setActive([false,false,false,true,false])
         }
 
@@ -146,38 +135,36 @@ export default function App() {
 
     },[isContact])
     
-    function moveAndRotate(posX, posY, posZ, rotX, rotY, rotZ) {
-  
+    function moveAndRotate(posX, posY, posZ, tiempo, rotX, rotY, rotZ) {
         if (camera.current) {
-
             let { x, y, z } = camera.current.position;
-            moverEje(camera,'x',x,posX);
-            moverEje(camera,'y',y,posY);
-            moverEje(camera,'z',z,posZ);
-
-            // let { x: _x, y: _y, z: _z } = camera.current.rotation;
-            // rotarEje(camera, 'x', _x, rotX);
-            // rotarEje(camera, 'y', _y, rotY);
-            // rotarEje(camera, 'z', _z, rotZ);
+            moverEje(camera,'x',x,posX,tiempo);
+            moverEje(camera,'y',y,posY,tiempo);
+            moverEje(camera,'z',z,posZ,tiempo);
         }
     }
 
     const onLoad = (spline) => {
-
         const obj = spline.findObjectByName('Camera');
         camera.current = obj;
         home()
       };
 
+      function getPosition() {
+        console.log(camera.current)
+        console.log(camera.current.position); // Verificar la cámara
+        console.log(camera.current.rotation); // Verificar la cámara
+    }
 
 
     return (
         <div className='portfolio'>
-            <Spline className='scene' scene="https://prod.spline.design/RwlJrSCvQ9Olqjib/scene.splinecode" onLoad={onLoad} />
-            {/* <Spline className='scene' scene="https://prod.spline.design/RwlJrSCvQ9Olqjib/scene.splinecode" onLoad={onLoad} /> */}
-            
+            <Spline className='scene' scene="https://prod.spline.design/Zky3yicYLH7wXaXk/scene.splinecode" onLoad={onLoad} />
+            {/* <button className='bt-header' type="button" onClick={getPosition}>
+                GET POSITION
+            </button> */}
             <div className='container'>
-                <Header active={active} setActive={setActive} scrollCount={scrollCount} setScrollCount={setScrollCount} camera={camera} moveAndRotate={moveAndRotate}></Header>
+                <Header active={active} setActive={setActive}  camera={camera} moveAndRotate={moveAndRotate} homeRef={homeRef} aboutRef={aboutRef} proyectsRef={proyectsRef} skillsRef={skillsRef} contactRef={contactRef}></Header>
                 <main className="body">
                         <Home ref={homeRef} active={active}></Home>
                         <About ref={aboutRef} active={active}></About>
