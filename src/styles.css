@@ -32,15 +32,21 @@
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
   .body{
     position: relative;
     height: 81%;
-    width: 100%;
+    max-width: 100vw;
     z-index: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
 @media (max-width: 1600px) {

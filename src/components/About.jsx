@@ -1,13 +1,14 @@
 import "../styles/About.css";
 import CardAbout from "./CardAbout"
 import imgPersonal from "../assets/images/yo.png"
+import { forwardRef } from "react";
 
-export default function About(props){
+const About = forwardRef((props,ref) => {
 
     const {active} = props;
 
     return(
-        <section className="about">
+        <section ref={ref} className="about">
         <aside className={`leftSide ${active[1]? 'about-animation-up' : 'about-animation-down animation-delay-left'}`}>
             <div className='img-left'><img className="size-img" src={imgPersonal}/></div>
             <div className='data-about'>
@@ -71,4 +72,6 @@ export default function About(props){
     </section>
     )
 
-}
+});
+
+export default About;

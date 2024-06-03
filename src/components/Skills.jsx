@@ -1,4 +1,6 @@
 import "../styles/Skills.css";
+import { forwardRef } from "react";
+
 import CardAbout from "../components/CardAbout"
 import reactLogo from "../assets/icons/skills/reactLogo.svg"
 import javaLogo from "../assets/icons/skills/javaLogo.svg"
@@ -18,12 +20,12 @@ import problemSolution from "../assets/icons/problemSolution.svg"
 import timemanagment from "../assets/icons/timemanagment.svg"
 import teamwork from "../assets/icons/teamwork.svg"
 
-export default function Skills(props){
+const Skills = forwardRef((props,ref) => {
 
     const {active} = props;
 
     return(
-        <section className="skills">
+        <section ref={ref} className="skills">
         <header className={`skills-title ${active[3]? 'skills-animation-up-title' : 'skills-animation-down-title'}`}><span className='skills-title-text'>SKILLS</span></header>
         <article className={`hard-skills ${active[3]? 'skills-animation-up-hard' : 'skills-animation-down-hard'}`}>
             <div className='hard-skills-title card-title'><CardAbout><span className='article-title'>HARD SKILLS</span></CardAbout></div>
@@ -101,4 +103,6 @@ export default function Skills(props){
         </article>
     </section>
     )
-}
+})
+
+export default Skills;

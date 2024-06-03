@@ -1,12 +1,13 @@
 import {useState} from "react";
 import "../styles/Contact.css";
+import { forwardRef } from "react";
 
 import phone from "../assets/icons/contact/phone.svg"
 import email from "../assets/icons/contact/email.svg"
 import location from "../assets/icons/contact/location.svg"
 import emailjs from '@emailjs/browser';
 
-export default function Contact(props){
+const Contact = forwardRef((props,ref) => {
 
     const [formData, setFormData] = useState({
         from_name: '',
@@ -44,7 +45,7 @@ export default function Contact(props){
     const {active} = props;
 
     return(
-        <section className='contact'>
+        <section ref={ref} className='contact'>
         <header className={`contact-title ${active[4] ? 'contact-animation-up-title' : 'contact-animation-down-title'}`}>
             <span className='contact-title-text'>CONTACT ME</span>
         </header>
@@ -77,4 +78,6 @@ export default function Contact(props){
             </div>
         </section>
     )
-}
+})
+
+export default Contact;

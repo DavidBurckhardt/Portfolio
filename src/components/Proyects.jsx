@@ -1,4 +1,5 @@
 import "../styles/Proyects.css";
+import { forwardRef } from "react";
 
 import github from "../assets/icons/github.svg"
 import recipe from "../assets/icons/recipe.svg"
@@ -8,12 +9,12 @@ import brain from "../assets/icons/brain.svg"
 import chatbot from "../assets/icons/chatbot.svg"
 import lemon from "../assets/icons/lemon.svg"
 
-export default function Proyects(props){
+const Proyects = forwardRef((props,ref) => {
 
     const {active} = props;
 
     return(
-        <section className={`proyects`} >
+        <section ref={ref} className={`proyects`} >
         <header className={`proyects-title ${active[2]? 'proyects-animation-right-title' : 'proyects-animation-left-title'}`}><span className='proyects-title-text'>PROYECTS</span></header>
         <div className={`proyects-card ${active[2]? 'proyects-animation-right' : 'proyects-animation-left'}`} >
             <div className="parent">
@@ -99,4 +100,6 @@ export default function Proyects(props){
         </div>
     </section>
     )
-}
+})
+
+export default Proyects;
