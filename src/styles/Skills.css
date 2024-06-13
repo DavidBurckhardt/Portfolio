@@ -124,6 +124,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: repeat(2, 1fr); 
+
 }
 
 .parent-skill {
@@ -253,4 +254,22 @@
         height: 75px;
     }
 
+  }
+
+  .skill-small{
+    display: none;
+}
+
+  @media (max-width: 800px) {
+    .skills{
+        display: none;
+    }
+
+    .skill-small{
+        position: relative;
+        display: block;
+        background-color: red;
+        width: 100%;
+        height: 100%;
+    }
   }

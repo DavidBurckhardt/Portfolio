@@ -175,7 +175,13 @@
     
     .home{
         position: relative;
-        width: 80%;
+        width: 100%;
+    }
+
+    .home-left-section{
+        position: relative;
+        width: 90%;
+        margin-left: 5%;
     }
 
     .phrase-text {

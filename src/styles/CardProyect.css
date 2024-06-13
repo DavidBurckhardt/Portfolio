@@ -5,7 +5,8 @@
 
   .card-proyect {
 
-    padding-top: 50px;
+    height: 310px;
+    padding-top: 30px;
     /* border-radius: 10px; */
     border: 3px solid rgb(255, 255, 255);
     transform-style: preserve-3d;
@@ -29,7 +30,7 @@
   .content-box {
     background-image: transparent;
     transition: all 0.5s ease-in-out;
-    padding: 60px 25px 25px 25px;
+    padding: 70px 25px 0px 25px;
     transform-style: preserve-3d;
     border-radius: 0.75rem;
   }
@@ -102,7 +103,7 @@
     background: transparent;
     border: 1px solid white;
     /* border-radius: 10px; */
-    padding: 10px;
+    padding: 8px;
     transform: translate3d(0px, 0px, 80px);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
     border-radius: 100%;
@@ -113,8 +114,8 @@
   }
   
 .icon-size-proyect{
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
 }
 
 @media (max-width: 1600px) {

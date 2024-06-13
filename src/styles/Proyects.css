@@ -94,6 +94,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Divide en 2 columnas iguales */
     grid-template-rows: repeat(2, 1fr); /* Divide en 2 filas iguales */
+    gap: 10px;
 }
 
 .parent {

@@ -6,7 +6,7 @@ export function SocialMedia(){
         <ul className="example-2">
             <li className="icon-content">
                 <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/david-burckhardt-02a493213/"
                 aria-label="LinkedIn"
                 data-social="linkedin"
                 >
@@ -29,7 +29,7 @@ export function SocialMedia(){
                 {/* <div className="tooltip">LinkedIn</div> */}
             </li>
             <li className="icon-content">
-                <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+                <a href="https://github.com/DavidBurckhardt" aria-label="GitHub" data-social="github">
                 <div className="filled"></div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export function SocialMedia(){
             </li>
             <li className="icon-content">
                 <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/david_burck/"
                 aria-label="Instagram"
                 data-social="instagram"
                 >

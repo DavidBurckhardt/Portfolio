@@ -14,6 +14,8 @@
   src: url('./assets/fonts/Meltbrown.ttf') format('opentype');
 }
 
+
+
 .portfolio{
   z-index: 0;
   height: 100vh;
@@ -52,5 +54,11 @@
 @media (max-width: 1600px) {
   .scene{
     zoom: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .scene{
+    zoom: 150%;
   }
 }
