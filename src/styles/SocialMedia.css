@@ -13,7 +13,7 @@ ul {
     align-items: center;
   }
   .example-2 .icon-content {
-    margin: 0 10px;
+    margin: 0 20px;
     position: relative;
   }
 
@@ -39,9 +39,11 @@ ul {
     width: 30px;
     height: 30px;
   }
+  
   .example-2 .icon-content a:hover {
     color: white;
   }
+
   .example-2 .icon-content a .filled {
     position: absolute;
     top: auto;
@@ -52,6 +54,7 @@ ul {
     background-color: #000;
     transition: all 0.3s ease-in-out;
   }
+
   .example-2 .icon-content a:hover .filled {
     height: 100%;
   }
@@ -63,25 +66,34 @@ ul {
   }
   
   @media (max-width: 1600px) {
+
+    .example-2 .icon-content {
+      margin: 0 15px;
+    }
+
     .example-2 .icon-content a {
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
     }
 
     .example-2 .icon-content a svg {
-      width: 23px;
-      height: 23px;
+      width: 30px;
+      height: 30px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
+  .example-2{
+    padding: 0;
+  }
+
   .example-2 .icon-content a {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .example-2 .icon-content a svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 }

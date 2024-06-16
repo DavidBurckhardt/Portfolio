@@ -1,6 +1,6 @@
 .header{
     position: relative;
-    height: 10%;
+    height: 10vh;
     width: 100%;
     z-index: 10;
     
@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+.burger-menu{
+  display: none;
+}
 
   .title{
     width: 30%;
@@ -84,7 +88,7 @@
     }
   }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
     .seccions{
       display: none;
     }
@@ -94,22 +98,22 @@
     }
 
     .title{
-      width: 50%;
+      width: 75%;
     }
 
     .title-name{
-      font-size: 18px;
+      font-size: calc(4.5vw);
       margin-left: 4vw;
     }
 
     .burguer-menu{
-      display: none;
+      display: flex;
       position: relative;
-      width: 50%;
+      width: 25%;
       height: 100%;
   
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
     }
 }

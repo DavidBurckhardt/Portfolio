@@ -1,9 +1,9 @@
 
 
 .about{
-    position: relative;
     width: 100%;
-    min-height: 100%;
+    height: 81vh;
+    overflow: hidden;
     background-color: transparent;
     top:0;
 
@@ -12,6 +12,10 @@
     align-items: center;
     gap:0;
     flex-wrap: wrap;
+}
+
+.about-small{
+    display: none;
 }
 
 .about-animation-down{
@@ -85,8 +89,8 @@
 }
 
 .img-left{
-    width: 100%;
-    height: 75%;
+    width: 70%;
+    height: 80%;
     background-color: transparent;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
@@ -100,7 +104,8 @@
 
 .size-img{
     position: relative;
-    height: 100%;
+    width: 85%;
+    height: 500px;
 }
 
 .data-about{
@@ -110,7 +115,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     gap:0;
 }
@@ -307,7 +312,7 @@
 
     .size-img{
         position: relative;
-        height: 90%;
+        height: 100%;
         width: 90%;
     }
 
@@ -333,60 +338,122 @@
     
 }
 
-@media (max-width: 800px) {
-    .about {
-        flex-direction: row; /* Colocar los elementos en columna */
+@media (max-width: 1100px) {
+    .about{
+        display: none;
+    }
+
+    .about-small{
+        width: 100%;
+        height: 81vh;
+        background-color: transparent;
+    
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+    }
+
+    .leftSide{
+        position: relative;
         width: 100%;
         height: 100%;
-        overflow-y: auto;
+    
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .leftSide, .rightSide {
-        width: 90%; /* Ajustar el ancho al 100% */
-        margin-right: 0; /* Eliminar el margen derecho */
-        gap: 0px;
-        margin-left: 5%;
-        overflow:visible;
+    .img-left{
+        width: 90%;
+        height: 70%;
     }
 
-    .rightSide{
+    .data-about{
+        width: 100%;
+        height: 20%;
+    }
+
+    .data-text{
+        font-size: calc(4.5vw + 0.5vh); 
+    }
+
+    .right-side{
+        position: relative;
+        width: 100%;
         height: auto;
+        margin: 0 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card-title{
-        position: relative;
-        height: 40px;
-        width: 100%;
+        height: auto;
+        margin: 0 0 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .education{
+        height: auto;
+        margin: 10px 0;
+        
+    }
+
+    .experience{
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .language{
+        height: auto;
+        margin: 10px 0;
     }
     
-
-    .title-right-text {
-        font-size: 55px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .title-right-text{
+        font-size: calc(12vw + 1.5vh);
+        margin: 0;
     }
 
-    .article-title {
-        font-size: 20px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .info-about{
+        height: auto;
     }
 
-    .data-text {
-        font-size: calc(2vw + 1.5vh); /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .info-about-title{
+        font-size: calc(1.5vw + 1.2vh);
+        height: auto;
+        margin: 0 0 2px 0;
+        text-align: center;
     }
 
-    .info-about-title {
-        font-size: 17px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
-    }
-
-    .info-about-subtitle {
-        color: #bbb;
-        font-size: 12px; /* Ajustar el tamaño de fuente para pantallas pequeñas */
-    }
-
-    .info-about-text {
-        font-size: 1.2vh; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .info-about-subtitle{
+        font-size: 14px;
+        text-align: center;
+        height: auto;
+        margin: 0 0 8px 0;
+        text-shadow: none;
+        color: #ccc;
     }
 
     .language1{
-        width: 40%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .language2{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
 }

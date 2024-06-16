@@ -1,0 +1,89 @@
+/* General styles for the burger menu */
+.burger-menu {
+    position: relative;
+    z-index: 12; /* Ensure the menu is above other content */
+  }
+  
+  /* Menu icon styles */
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 12; /* Ensure the icon is above the menu */
+    background-color: transparent;
+  }
+  
+  .menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-icon .bar {
+    width: 35px;
+    height: 4px;
+    background-color: white; /* Futuristic neon color */
+    margin: 6px 0;
+    transition: 0.7s;
+    border-radius: 2px;
+    box-shadow: 0 0 10px white, 0 0 20px #ddd, 0 0 30px #aaa;
+    z-index: 1000;
+  }
+
+  .menu-icon .bar1 {
+    width: 25px;
+  }
+
+  .menu-icon .bar3 {
+    margin-left: 10px;
+    width: 25px;
+  }
+  
+  .menu-icon.open .bar1 {
+    width: 35px;
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .menu-icon.open .bar2 {
+    opacity: 0;
+  }
+  
+  .menu-icon.open .bar3 {
+    width: 35px;
+    transform: rotate(45deg) translate(-8px, -8px);
+    margin-left: 0px;
+  }
+  
+  /* Fullscreen menu content styles */
+  .menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+    color: white;
+    z-index: 12; /* Ensure the menu is above other content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menu-content.show {
+    display: flex;
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-content ul li {
+    margin: 20px 0;
+    font-family: 'Clesmont';
+  }
+
+  

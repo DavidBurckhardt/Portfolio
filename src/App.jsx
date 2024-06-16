@@ -19,32 +19,84 @@ export default function App() {
     const [active, setActive] = useState([true, false, false, false, false]);
     const [isNavigating, setIsNavigating] = useState(false);
     
-    const [homeRef,isHome] = useIntersection({threshold: 0.6,});
-    const [aboutRef,isAbout] = useIntersection({threshold: 0.6,});
-    const [proyectsRef,isProyects] = useIntersection({ threshold: 0.6,});
-    const [skillsRef,isSkills] = useIntersection({threshold: 0.6,});
-    const [contactRef,isContact] = useIntersection({threshold: 0.6,});
+    const [homeRef, isHome] = useIntersection({threshold: 0.6,}, active[0]);
+    const homeRefSmall = useRef();
+    const refHome = [homeRef, homeRefSmall]
+
+    const [aboutRef, isAbout] = useIntersection({ threshold: 0.6 },active[1]);
+    const aboutRefSmall = useRef();
+    const refAbout = [aboutRef, aboutRefSmall];
+    
+    const [proyectsRef, isProyects] = useIntersection({ threshold: 0.6 },active[2]);
+    const proyectsRefSmall = useRef();
+    const refProyects = [proyectsRef, proyectsRefSmall];
+    
+    const [skillsRef, isSkills] = useIntersection({ threshold: 0.6 },active[3]);
+    const skillsRefSmall = useRef();
+    const refSkills = [skillsRef, skillsRefSmall];
+    
+    const [contactRef, isContact] = useIntersection({ threshold: 0.6 },active[4]);
+    const contactRefSmall = useRef();
+    const refContact = [contactRef, contactRefSmall];
+
+    const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1100);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsWideScreen(window.innerWidth >= 1100);
+      };
+      window.addEventListener('resize', handleResize);
+      // Cleanup event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
+    
+    const scrollTo = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const home = () => {
+        setIsNavigating(true)
         moveAndRotate(-150, 0, 350)
         setActive([true,false,false,false,false])
+        scrollTo(homeRef)
+        setInterval(() => setIsNavigating(false),3000)
     }
+
     const aboutMe = () => {
+        setIsNavigating(true)
         moveAndRotate(-450, 0, -30)
-        setActive([false,true,false,false,false])
+        
+        scrollTo(aboutRef)
+        setInterval(() => setIsNavigating(false),3000)
     }
-    const proyects = () => {
-        moveAndRotate(-200, 0, -200)
-        setActive([false,false,true,false,false])
-    }
-    const skills = () => {
-        moveAndRotate(75, 50, 280)
-        setActive([false,false,false,true,false])
-    }
-    const contact = () => {
-        moveAndRotate(165, 200, -122)
-        setActive([false,false,false,false,true])
-    }
+  
+      const proyects = () => {
+          moveAndRotate(-200, 0, -200)
+          setActive([false,false,true,false,false])
+          scrollTo(proyectsRef)
+          setInterval(() => setIsNavigating(false),3000)
+      }
+  
+      const skills = () => {
+          setIsNavigating(true)
+          moveAndRotate(75, 50, 280)
+          setActive([false,false,false,true,false])
+          scrollTo(skillsRef)
+          setInterval(() => setIsNavigating(false),3000)
+      }
+  
+      const contact = () => {
+          setIsNavigating(true)
+          moveAndRotate(165, 200, -122)
+          setActive([false,false,false,false,true])
+          scrollTo(contactRef)
+          setInterval(() => setIsNavigating(false),3000)
+      }
 
     useEffect(() => {
         home();
@@ -84,15 +136,28 @@ export default function App() {
 
     return (
         <div className='portfolio'>
-            <Spline className='scene' scene="https://prod.spline.design/Zky3yicYLH7wXaXk/scene.splinecode" onLoad={onLoad} />
+            {isWideScreen ? 
+                (<Spline className='scene' scene="https://prod.spline.design/Zky3yicYLH7wXaXk/scene.splinecode" onLoad={onLoad} /> ) : 
+                (<Spline scene="https://prod.spline.design/N3BgizkLX322t6wG/scene.splinecode"/>) 
+            }
             <div className='container'>
-                <Header active={active} setActive={setActive}  setIsNavigating={setIsNavigating} camera={camera} homeRef={homeRef} aboutRef={aboutRef} proyectsRef={proyectsRef} skillsRef={skillsRef} contactRef={contactRef}></Header>
+                <Header 
+                    active={active} 
+                    setActive={setActive}  
+                    setIsNavigating={setIsNavigating} 
+                    camera={camera} 
+                    homeRef={refHome} 
+                    aboutRef={refAbout} 
+                    proyectsRef={refProyects} 
+                    skillsRef={refSkills} 
+                    contactRef={refContact}>
+                </Header>
                 <main className="body">
-                        <Home ref={homeRef} active={active}></Home>
-                        <About ref={aboutRef} active={active}></About>
-                        <Proyects ref={proyectsRef} active={active}></Proyects>
-                        <Skills ref={skillsRef} active={active}></Skills>
-                        <Contact ref={contactRef} active={active}></Contact>
+                        <Home ref={refHome} active={active}></Home>
+                        <About ref={refAbout} active={active}></About>
+                        <Proyects ref={refProyects} active={active}></Proyects>
+                        <Skills ref={refSkills} active={active}></Skills>
+                        <Contact ref={refContact} active={active}></Contact>
                 </main>
                 <Footer active={active}></Footer>
             </div>

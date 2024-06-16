@@ -4,14 +4,26 @@ import "../styles/Button.css";
 import "../styles/GetCv.css";
 import download from "../assets/icons/download.svg"
 import { moverEje } from '../utils/MoverEjes';
+import BurgerMenu from "./BurgerMenu";
 
 export default function Header(props){
 
-    const {active, setActive, setIsNavigating, camera, homeRef, aboutRef, proyectsRef, skillsRef, contactRef} = props;
+    const {
+        active, 
+        setActive, 
+        setIsNavigating, 
+        camera, 
+        homeRef, 
+        aboutRef, 
+        proyectsRef, 
+        skillsRef, 
+        contactRef,
+    } = props;
 
     const scrollTo = (ref) => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
+            setInterval(() => setIsNavigating(false),3000);
         }
     };
 
@@ -28,39 +40,34 @@ export default function Header(props){
         setIsNavigating(true)
         moveAndRotate(-150, 0, 350)
         setActive([true,false,false,false,false])
-        scrollTo(homeRef)
-        setInterval(() => setIsNavigating(false),3000)
+        scrollTo(homeRef[0])
     }
 
     const aboutMe = () => {
         setIsNavigating(true)
         moveAndRotate(-450, 0, -30)
         setActive([false,true,false,false,false])
-        scrollTo(aboutRef)
-        setInterval(() => setIsNavigating(false),3000)
+        scrollTo(aboutRef[0])
     }
   
       const proyects = () => {
           moveAndRotate(-200, 0, -200)
           setActive([false,false,true,false,false])
-          scrollTo(proyectsRef)
-          setInterval(() => setIsNavigating(false),3000)
+          scrollTo(proyectsRef[0])
       }
   
       const skills = () => {
           setIsNavigating(true)
           moveAndRotate(75, 50, 280)
           setActive([false,false,false,true,false])
-          scrollTo(skillsRef)
-          setInterval(() => setIsNavigating(false),3000)
+          scrollTo(skillsRef[0])
       }
   
       const contact = () => {
           setIsNavigating(true)
           moveAndRotate(165, 200, -122)
           setActive([false,false,false,false,true])
-          scrollTo(contactRef)
-          setInterval(() => setIsNavigating(false),3000)
+          scrollTo(contactRef[0])
       }
 
       function getPosition() {
@@ -100,7 +107,16 @@ export default function Header(props){
                 <img className='cv-img' src={download}/>
             </button>
         </section>
-        <section className="burguer-menu">
+        <section className="burger-menu">
+            <BurgerMenu 
+                active={active} 
+                setActive={setActive} 
+                homeRef={homeRef[1]} 
+                aboutRef={aboutRef[1]}
+                proyectsRef={proyectsRef[1]}
+                skillsRef={skillsRef[1]}
+                contactRef={contactRef[1]} 
+            ></BurgerMenu>
         </section>
         </header>
     )

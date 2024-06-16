@@ -1,45 +1,47 @@
+
 .skills{
-    position: relative;
-    width: 40%;
-    height: 85%;
-    left: 6%;
-    top:0;
+    width: 100%;
+    height: 81vh;
     background-color: transparent;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.skills-small{
+    display: none;
 }
 
 .skills-animation-down-title{
     transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOTITLE 1.2s forwards ease-in;
+    animation: visibleNOTITLE 1.6s forwards ease-in;
 }
 
 .skills-animation-down-hard{
     transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOHARD 1.2s forwards ease-in;
+    animation: visibleNOHARD 1.6s forwards ease-in;
 }
 
 .skills-animation-down-soft{
     transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOSOFT 1.2s forwards ease-in;
+    animation: visibleNOSOFT 1.6s forwards ease-in;
 }
 
 .skills-animation-up-title{
     transform: translate(-150%,150%); 
-    animation: visibleSI 1.2s forwards ease-in;
+    animation: visibleSI 1.6s forwards ease-in;
 }
 
 .skills-animation-up-hard{
     transform: translate(150%,-200%); 
-    animation: visibleSI 1.2s forwards ease-in;
+    animation: visibleSI 1.6s forwards ease-in;
 }
 
 .skills-animation-up-soft{
-    transform: translate(150%,200%); 
-    animation: visibleSI 1.2s forwards ease-in;
+    transform: translate(150%,100%); 
+    animation: visibleSI 1.6s forwards ease-in;
 }
 
 @keyframes visibleSI {
@@ -65,7 +67,7 @@
 
 @keyframes visibleNOSOFT {
     to {
-        transform: translate(150%,200%); 
+        transform: translate(150%,100%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
@@ -79,8 +81,6 @@
     4px 4px 0px #ccc, 
     5px 5px 0px #ccc, 
     0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
-    top: 70%;
-    left: 10%;
 
     display: flex;
     justify-content: left;
@@ -95,7 +95,7 @@
 
 .hard-skills{
     position: relative;
-    width: 100%;
+    width: 40%;
     height: 50%;
     margin-left: 10%;
     z-index: 10;
@@ -190,11 +190,12 @@
 
 .soft-skills{
     position: relative;
-    width: 100%;
+    width: 30%;
     height: 50%;
     z-index: 10;
     background-color: transparent;
-    margin-left: 100%;
+    margin-left: 35%;
+    bottom: 5%;
 
     display: flex;
     flex-direction: column;
@@ -207,7 +208,7 @@
     height: 14%;
     width: 100%;
     background-color: transparent;
-    margin-left: 20%;
+    margin-left: 0%;
 
     display: flex;
     justify-content: flex-end;
@@ -217,8 +218,7 @@
 .soft-skills-body{
     position: relative;
     height: 70%;
-    width: 66%;
-    margin-left: 36%;
+    width: 100%;
     background-color: transparent;
     margin-top: 3%;
 
@@ -227,26 +227,26 @@
     grid-template-rows: repeat(2, 1fr); 
 }
 
+.article-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
   @media (max-width: 1600px) {
-
-    .skills{
-        left: 0%;
-    }
-
-    .hard-skills{
-        margin-left: 37%;
-    }
-
-    .hard-skills-title{
-        margin-left: 5%;
-    }
-
-    .soft-skills{
-        margin-left: 120%;
+    
+    .skills-title{
+        margin-top: 20%;
+        margin-left: 7%;
     }
 
     .soft-skills-title{
-        margin-left: 17%;
+        margin-left: 0%;
+    }
+
+    .soft-skills{
+        margin-left: 41%;
+        bottom: 6%;
     }
 
     .card-skill{
@@ -256,20 +256,114 @@
 
   }
 
-  .skill-small{
+  .skills-small{
     display: none;
 }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     .skills{
         display: none;
     }
 
-    .skill-small{
+    .skills-small{
         position: relative;
-        display: block;
-        background-color: red;
+        background-color: transparent;
         width: 100%;
         height: 100%;
+        margin: 30px 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-small-title{
+        position: relative;
+        width: 100%;
+        height: 15%;
+        background-color: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skills-small-body{
+        position: relative;
+        width: 100%;
+        height: 85%;
+        background-color: transparent;
+
+        display: flex;
+    }
+
+    .skills-title-text{
+        font-size: calc(15vw + 20px);
+        text-shadow: 
+        1px 1px 0px #ccc, 
+        2px 2px 0px #ccc, 
+        3px 3px 0px #ccc, 
+        4px 4px 0px #ccc, 
+        5px 5px 0px #ccc, 
+        0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
+    }
+
+    .title-skills{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-small-body-left{
+        flex: 1;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-small-body-left-title{
+        flex: 0.1;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills-small-body-left-body{
+        flex: 0.9;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .skills-small-body-right{
+        flex: 1;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hard-skills-title{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-title{
+        font-size: 4vw;
     }
   }

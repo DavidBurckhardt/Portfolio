@@ -1,15 +1,25 @@
 .contact{
-    position: relative;
-    width: 65%;
-    height: 100vh;
-    left: 30%;
+    width: 100%;
+    height: 81vh;
     top:0;
     background-color: transparent;
+
+    display: flex;
+}
+
+.contact-section{
+    position: relative;
+    width: 65%;
+    left: 30%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contact-small{
+    display: none;
 }
 
 .contact-title{
@@ -37,7 +47,7 @@
 .contact-body{
     position: relative;
     width: 100%;
-    height: 80%;
+    height: 90%;
     background-color: transparent;
 }
 
@@ -108,8 +118,8 @@
     2px 2px 0px #bbb, 
     0px 0px 10px rgba(255, 255, 255, 0.9); /* Brillo sombreado */
     font-family: 'Clesmont';
-    
 }
+
 .container-form p{
     font-size: 18px;
     line-height: 1.6;
@@ -154,7 +164,7 @@
     font-family: 'Clesmont';
 }
 
-.container-form form .campo, textarea{
+.container-form form .campo, textarea {
     position: relative;
     width: 100%;
     padding: 19px 10px;
@@ -171,6 +181,7 @@
 .container-form form .campo{
     position: relative;
     width: 100%;
+    
 }
 
 .container-form form textarea{
@@ -187,10 +198,19 @@
     font-family: 'Clesmont';
 }
 
+.btn-submit-position{
+    position: relative;
+    bottom:10px
+}
+
 @media (max-width: 1600px) {
     .contact{
-        width: 68%;
+        width: 100%;
         left: 27%;
+    }
+
+    .contact-small{
+        display: none;
     }
 
     .info-form{
@@ -231,4 +251,133 @@
         min-height: 100px;
     
     }
+}
+
+@media (max-width: 1100px) {
+    .contact{
+        display: none;
+    }
+
+    .contact-small{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        margin: 30px 0 0 0;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-small-title{
+        position: relative;
+        width: 100%;
+        height: 15%;
+        background-color: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-title-text{
+        font-size: calc(13vw + 20px);
+        text-shadow: 
+        1px 1px 0px #ccc, 
+        2px 2px 0px #ccc, 
+        3px 3px 0px #ccc, 
+        4px 4px 0px #ccc, 
+        5px 5px 0px #ccc, 
+        0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
+    }
+    
+    .contact-small-body{
+        position: relative;
+        width: 100%;
+        height: 85%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-body-title{
+        font-size: calc(1.5vw + 2vh);
+        text-shadow: 
+        1px 1px 0px #bbb, 
+        2px 2px 0px #bbb, 
+        0px 0px 10px rgba(255, 255, 255, 0.9); /* Brillo sombreado */
+        font-family: 'Clesmont';
+        text-align: center;
+    }
+
+    .text-body-p{
+        margin: 0px 30px 0px 30px;
+        font-size: calc(1vw + 1.1vh);
+        line-height: 1.4;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        font-family: 'Clesmont';
+        text-align: right;
+    }
+
+    .text-body-data{
+        font-size: calc(1.3vw + 0.8vh);
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        font-family: 'Clesmont';
+    }
+
+    .contact-data-list{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 20%;
+        background-color: transparent;
+
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .contact-data{
+        position: relative;
+        width: 100%;
+        margin-left: 1.5%;
+        height: 33%;
+
+        background-color: transparent;
+    
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .info-form{
+        display: flex;
+        flex-direction: column;
+        height: 65%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .campo{
+        position: relative;
+        width: 90%;
+        height: calc(2.5vh + 5px);
+        padding: 15px 10px;
+        font-size: 16px;
+        margin-bottom: 11px;
+        border-radius: 5px;
+        outline: 0px;
+        box-shadow: inset 0 0 9px #6043FA, inset 0 0 18px #D743FA, inset 0 0 25px #9C43FA;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: transparent;
+        font-family: 'Clesmont';
+    }
+
+    .btn-submit-position{
+        margin-top: 5px;
+    }
+
 }
