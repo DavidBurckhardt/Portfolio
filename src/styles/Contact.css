@@ -383,6 +383,7 @@
         border: 2px solid rgb(255, 255, 255);
         background-color: transparent;
         font-family: 'Clesmont';
+        color: white;
     }
 
     .btn-submit-position{

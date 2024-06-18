@@ -59,6 +59,7 @@
     width: 45%;
     height: 100%;
     text-align: end;
+    color: white;
     text-shadow: 
     1px 1px 0px #ccc, 
     2px 2px 0px #ccc, 
@@ -158,6 +159,7 @@
 
     .proyects-title-text{
         font-size: calc(11vw + 20px);
+        color: white;
         text-shadow: 
         1px 1px 0px #ccc, 
         2px 2px 0px #ccc, 

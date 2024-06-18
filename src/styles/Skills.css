@@ -89,6 +89,7 @@
 }
 
 .skills-title-text{
+    color: white;
     font-family: 'Clesmont';
     font-size: 117px;
     text-align: center;
@@ -302,6 +303,7 @@
 
     .skills-title-text{
         font-size: calc(15vw + 20px);
+        color: white;
         text-shadow: 
         1px 1px 0px #ccc, 
         2px 2px 0px #ccc, 
