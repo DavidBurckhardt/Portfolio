@@ -11,7 +11,7 @@ export function moverEje(camera,eje,actual,fin){
 
 
 export function aumentarEje(camera,eje,actual,fin){
-  let velocidad = 0.5; // Velocidad inicial
+  let velocidad = 1; // Velocidad inicial
   
   const incrementar = () => {
     if (actual < fin) {
@@ -24,7 +24,7 @@ export function aumentarEje(camera,eje,actual,fin){
         camera.current.position.z += velocidad;
       }
       // Incrementar la velocidad con el tiempo
-      velocidad += 0.001; // Puedes ajustar este valor según tu preferencia
+      velocidad += 0.01; // Puedes ajustar este valor según tu preferencia
     } else {
       clearInterval(intervalo);
     }
@@ -34,7 +34,7 @@ export function aumentarEje(camera,eje,actual,fin){
 }
 
   export function disminuirEje(camera,eje,actual,fin){
-    let velocidad = 0.5; // Velocidad inicial
+    let velocidad = 1; // Velocidad inicial
   
     const incrementar = () => {
       if (actual > fin) {
@@ -47,7 +47,7 @@ export function aumentarEje(camera,eje,actual,fin){
           camera.current.position.z -= velocidad;
         }
         // Incrementar la velocidad con el tiempo
-        velocidad += 0.001; // Puedes ajustar este valor según tu preferencia
+        velocidad += 0.01; // Puedes ajustar este valor según tu preferencia
       } else {
         clearInterval(intervalo);
       }

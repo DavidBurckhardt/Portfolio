@@ -81,8 +81,8 @@ const Contact = forwardRef((props,ref) => {
                 </div>
             </section>
             <section ref={ref[1]} className='contact-small'>
-                <header className="contact-small-title contact-title-text"><span className="title-skills">CONTACT</span></header>
-                <article className="contact-small-body">
+                <header className={`contact-small-title contact-title-text ${active[4] ? 'contact-animation-up-title' : 'contact-animation-down-title'}`}><span className="title-skills">CONTACT</span></header>
+                <article className={`contact-small-body ${active[4] ? 'contact-animation-up-body' : 'contact-animation-down-body'}`}>
                     <p className="text-body-p">Hi! If you're interested in collaborating or have any questions, feel free to contact me. I'm available for new opportunities and freelance projects. I look forward to hearing from you soon!</p>
                     <div className="contact-data-list">
                         <div className='contact-data' >

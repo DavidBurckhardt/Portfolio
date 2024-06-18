@@ -104,13 +104,13 @@ const Skills = forwardRef((props,ref) => {
             </article>
         </section>
         <section ref={ref[1]} className="skills-small">
-                <header className="skills-small-title skills-title-text"><span className="title-skills">SKILLS</span></header>
+                <header className={`skills-small-title skills-title-text ${active[3]? 'skills-animation-up-title' : 'skills-animation-down-title'}`}><span className="title-skills">SKILLS</span></header>
                 <article className="skills-small-body">
-                    <section className="skills-small-body-left">
+                    <section className={`skills-small-body-left ${active[3]? 'skills-animation-up-hard' : 'skills-animation-down-hard'}`}>
                         <div className="skills-small-body-left-title">
                             <div className='hard-skills-title'><CardAbout><span className='article-title'>HARD SKILLS</span></CardAbout></div>
                         </div>
-                        <div className="skills-small-body-left-body">
+                        <div className={`skills-small-body-left-body `}>
                             <div className='parent-skill'>
                                 <div className="card-skill"><img style={{ height: "70%", width: "70%"}} src={reactLogo}/></div>
                                 <span className='skill-name'>REACT</span>
@@ -129,7 +129,7 @@ const Skills = forwardRef((props,ref) => {
                             </div>
                         </div>
                     </section>
-                    <section className="skills-small-body-right">
+                    <section className={`skills-small-body-right ${active[3]? 'skills-animation-up-soft' : 'skills-animation-down-soft'} `}>
                         <div className="skills-small-body-left-title">
                             <div className='hard-skills-title'><CardAbout><span className='article-title'>SOFT SKILLS</span></CardAbout></div>
                         </div>

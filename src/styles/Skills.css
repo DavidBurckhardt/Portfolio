@@ -15,59 +15,59 @@
 }
 
 .skills-animation-down-title{
-    transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOTITLE 1.6s forwards ease-in;
+    transform: translateX(0); /* Establecer la posición inicial */
+    animation: visibleNOTITLE 1.2s forwards ease-in;
 }
 
 .skills-animation-down-hard{
-    transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOHARD 1.6s forwards ease-in;
+    transform: translateX(0); /* Establecer la posición inicial */
+    animation: visibleNOHARD 1.2s forwards ease-in;
 }
 
 .skills-animation-down-soft{
     transform: translateY(0); /* Establecer la posición inicial */
-    animation: visibleNOSOFT 1.6s forwards ease-in;
+    animation: visibleNOSOFT 1.2s forwards ease-in;
 }
 
 .skills-animation-up-title{
-    transform: translate(-150%,150%); 
-    animation: visibleSI 1.6s forwards ease-in;
+    transform: translateX(-100%); 
+    animation: visibleSI 1.2s forwards ease-in;
 }
 
 .skills-animation-up-hard{
-    transform: translate(150%,-200%); 
-    animation: visibleSI 1.6s forwards ease-in;
+    transform: translateX(-100%); 
+    animation: visibleSI 1.2s forwards ease-in;
 }
 
 .skills-animation-up-soft{
-    transform: translate(150%,100%); 
-    animation: visibleSI 1.6s forwards ease-in;
+    transform: translateY(100%); 
+    animation: visibleSI 1.2s forwards ease-in;
 }
 
 @keyframes visibleSI {
     to {
-        transform: translateY(0); /* Volver el elemento a su posición original */
+        transform: translateX(0); /* Volver el elemento a su posición original */
         opacity: 1; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
 
 @keyframes visibleNOTITLE {
     to {
-        transform: translate(-150%,150%); 
+        transform: translateX(-100%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
 
 @keyframes visibleNOHARD {
     to {
-        transform: translate(150%,-200%); 
+        transform: translateX(-100%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
 
 @keyframes visibleNOSOFT {
     to {
-        transform: translate(150%,100%); 
+        transform: translateY(100%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
@@ -365,5 +365,17 @@
 
     .article-title{
         font-size: 4vw;
+    }
+
+    .skills-animation-up-soft{
+        transform: translateX(100%); 
+        animation: visibleSI 1.2s forwards ease-in;
+    }
+
+    @keyframes visibleNOSOFT {
+        to {
+            transform: translateX(100%); 
+            opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
+        }
     }
   }

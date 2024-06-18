@@ -85,5 +85,12 @@
     margin: 20px 0;
     font-family: 'Clesmont';
   }
+  
+.li-cv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
   

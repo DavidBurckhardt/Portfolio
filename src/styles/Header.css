@@ -82,6 +82,10 @@
   display: none;
 }
 
+.link-pdf{
+  text-decoration: none;
+}
+
 @media (max-width: 1600px) {
     .title-name{
       font-size: 22px;
@@ -106,7 +110,7 @@
       margin-left: 4vw;
     }
 
-    .burguer-menu{
+    .burger-menu{
       display: flex;
       position: relative;
       width: 25%;
@@ -115,5 +119,26 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .getCv-small{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .button-CV-small{
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cv-img-small{
+      height: 25px;
+      width: 25px;
+      margin-bottom: 5px;
     }
 }

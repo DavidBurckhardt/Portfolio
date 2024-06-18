@@ -5,6 +5,8 @@ import "../styles/GetCv.css";
 import download from "../assets/icons/download.svg"
 import { moverEje } from '../utils/MoverEjes';
 import BurgerMenu from "./BurgerMenu";
+import { saveAs } from 'file-saver';
+import CV from '../assets/CV/CV.pdf'; // Ruta al archivo PDF
 
 export default function Header(props){
 
@@ -23,12 +25,15 @@ export default function Header(props){
     const scrollTo = (ref) => {
         if (ref && ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
-            setInterval(() => setIsNavigating(false),3000);
+            setTimeout(() => {
+                // Tu código aquí
+                setIsNavigating(false);
+              }, 4000);
         }
     };
 
     function moveAndRotate(posX, posY, posZ) {
-        if (camera.current) {
+        if (camera.current && window.innerWidth >= 1100) {
             let { x, y, z } = camera.current.position;
             moverEje(camera,'x',x,posX);
             moverEje(camera,'y',y,posY);
@@ -51,6 +56,7 @@ export default function Header(props){
     }
   
       const proyects = () => {
+          setIsNavigating(true)
           moveAndRotate(-200, 0, -200)
           setActive([false,false,true,false,false])
           scrollTo(proyectsRef[0])
@@ -75,6 +81,10 @@ export default function Header(props){
         console.log(camera.current.position); // Verificar la cámara
         console.log(camera.current.rotation); // Verificar la cámara
     }
+
+    const handleDownload = () => {
+        saveAs(CV, 'CV.pdf');
+      };
 
     return(
         <header className='header'>
@@ -102,8 +112,8 @@ export default function Header(props){
             </button> */}
         </section>
         <section className='getCv'>
-            <button className='btn-getcv button-CV'>
-                <a className="cv-text" href="../assets/CV/CV.pdf" download="CV.pdf">GET CV</a>
+            <button className='btn-getcv button-CV' onClick={handleDownload}>
+                GET CV
                 <img className='cv-img' src={download}/>
             </button>
         </section>
@@ -116,6 +126,8 @@ export default function Header(props){
                 proyectsRef={proyectsRef[1]}
                 skillsRef={skillsRef[1]}
                 contactRef={contactRef[1]} 
+                setIsNavigating={setIsNavigating}
+                scrollTo={scrollTo}
             ></BurgerMenu>
         </section>
         </header>

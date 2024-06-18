@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/BurgerMenu.css'; // Asegúrate de tener los estilos en un archivo separado
+import CV from '../assets/CV/CV.pdf'; // Ruta al archivo PDF
+import download from "../assets/icons/download.svg"
+import "../styles/GetCv.css";
 
 const BurgerMenu = (props) => {
 
@@ -10,49 +13,54 @@ const BurgerMenu = (props) => {
     aboutRef,
     proyectsRef,
     skillsRef,
-    contactRef 
+    contactRef,
+    scrollTo,
+    setIsNavigating
   } = props;
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollTo = (ref) => {
-    if (ref && ref.current) {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-};
-
 const home = () => {
     toggleMenu();
+    setIsNavigating(true)
     setActive([true,false,false,false,false]);
     scrollTo(homeRef);
 }
 
 const aboutMe = () => {
     toggleMenu();
+    setIsNavigating(true)
     setActive([false,true,false,false,false]);
     scrollTo(aboutRef);
 }
 
   const proyects = () => {
       toggleMenu();
+      setIsNavigating(true)
       setActive([false,false,true,false,false])
       scrollTo(proyectsRef)
   }
 
   const skills = () => {
       toggleMenu();
+      setIsNavigating(true)
       setActive([false,false,false,true,false])
       scrollTo(skillsRef)
   }
 
   const contact = () => {
     toggleMenu();
+    setIsNavigating(true)
     setActive([false,false,false,false,true])
     scrollTo(contactRef)
   }
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleDownload = () => {
+    saveAs(CV, 'CV.pdf');
   };
 
   return (
@@ -88,6 +96,12 @@ const aboutMe = () => {
             <button className={`bt-header ${active[4]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={contact}>
                 <span className='bt-header-text'>CONTACT</span>
             </button>
+          </li>
+          <li className='li-cv'>
+              <button className='btn-getcv button-CV-small' onClick={handleDownload}>
+                  GET CV
+                  <img className='cv-img-small' src={download}/>
+              </button>
           </li>
         </ul>
       </div>

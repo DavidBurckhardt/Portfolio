@@ -72,7 +72,7 @@ const About = forwardRef((props,ref) => {
         </aside>
     </section>
     <section ref={ref[1]} className="about-small">
-        <aside className="leftSide">
+        <aside className={`leftSide ${active[1]? 'about-animation-up' : 'about-animation-down animation-delay-left'}`}>
             <header className='title-right'><span className='title-right-text'>ABOUT ME</span></header>
             <div className='img-left'><img className="size-img" src={imgPersonal}/></div>
             <div className='data-about'>
@@ -84,8 +84,8 @@ const About = forwardRef((props,ref) => {
             </div>
         </aside>
     </section>
-    <section className="about-small">
-    <aside className="right-side">
+    <section ref={ref[2]} className="about-small">
+    <aside className={`right-side ${active[1]? 'about-animation-up-right' : 'about-animation-down-right animation-delay-right'}`}>
             <article className='education'>
                 <div className='card-title'><CardAbout><span className='article-title'>EDUCATION</span></CardAbout></div>
                 <div className='info-about'>
