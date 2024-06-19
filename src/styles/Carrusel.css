@@ -57,15 +57,9 @@
     top: 50%;
     background-color: transparent;
     color: white;
-    text-shadow: 
-    1px 1px 0px #ccc, 
-    2px 2px 0px #ccc, 
-    3px 3px 0px #ccc, 
-    4px 4px 0px #ccc, 
-    5px 5px 0px #ccc, 
-    0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */;
     border: none;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
@@ -81,4 +75,10 @@
     right: 10px;
     border: none;
   }
+
+  .left-arrow:focus,
+.right-arrow:focus {
+  border: none;
+  outline: 2px solid transparent; /* Un borde visible pero estilizado */
+}
   

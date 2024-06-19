@@ -213,7 +213,8 @@
     }
 
     .presentation-text{
-        font-size: calc(4vw + 0.5vh);
+        font-family: 'Clesmont';
+        font-size: calc(4vw + 0.2vh);
         text-indent: 35px;
     }
 

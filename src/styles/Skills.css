@@ -320,6 +320,10 @@
         align-items: center;
     }
 
+    .card-skill{
+        background: transparent;
+    }
+
     .skills-small-body-left{
         flex: 1;
         background-color: transparent;
