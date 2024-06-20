@@ -359,7 +359,7 @@
         height: 81vh;
         background-color: transparent;
         overflow: visible;
-        margin: 40px 0px;
+        margin: 20px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -473,5 +473,11 @@
 @media (max-height: 620px) {
     .right-side{
         margin-top: 50px;
+    }
+}
+
+@media (max-height:600px){
+    .about-small{
+        margin: 10px 0;
     }
 }

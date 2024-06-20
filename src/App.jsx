@@ -33,7 +33,7 @@ export default function App() {
     const refProyects = [proyectsRef, proyectsRefSmall];
 
     const [skillsRef, isSkills] = useIntersection({ threshold: 0.5 }, false, isNavigating);
-    const [skillsRefSmall, isSkillsSmall] = useIntersection({ threshold: 0.5 }, false, isNavigating);
+    const [skillsRefSmall, isSkillsSmall] = useIntersection({ threshold: 0.4 }, false, isNavigating);
     const refSkills = [skillsRef, skillsRefSmall];
 
     const [contactRef, isContact] = useIntersection({ threshold: 0.5 }, false, isNavigating);

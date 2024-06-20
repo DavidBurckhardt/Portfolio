@@ -135,25 +135,26 @@
         position: relative;
         background-color: transparent;
         width: 100%;
-        height: 100%;
+        height: 80%;
         overflow: visible;
-        margin: 40px 0px;
+        margin: 0px 0px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
     }    
 
     .proyects-small-title{
-        position: relative;
+        position: absolute;
         flex: 0.15;
         width: 100%;
+        top: 0px;
         background-color: transparent;
     }
 
     .proyects-small-body{
         position: relative;
-        flex: 0.85;
+        height: auto;
         width: 100%;
         background-color: transparent;
     }
@@ -183,4 +184,16 @@
     .proyects-small-title{
         margin-bottom: 50px;
     }
+
+    .proyects-small{
+        margin: 0px 0px 20px 0px;
+    }
+
 }
+
+@media (max-height:700px){
+    .proyects-small-body{
+        margin-top: 100px;
+    }
+}
+
