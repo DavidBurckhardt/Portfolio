@@ -3,6 +3,7 @@ import { saveAs } from 'file-saver';
 import download from "../assets/icons/download.svg";
 import "../styles/BurgerMenu.css";
 import { scrollTo } from '../utils/Scroll';
+import { SocialMedia } from './SocialMedia';
 
 const BurgerMenu = ({
     active,
@@ -42,7 +43,7 @@ const BurgerMenu = ({
                 <div className="bar bar3"></div>
             </div>
             <div className={`menu-content ${isOpen ? 'show' : ''}`} onClick={toggleMenu}>
-                <ul>
+                <ul className='button-list'>
                     {items.map((item, index) => (
                         <li key={index}>
                             <button
@@ -54,13 +55,14 @@ const BurgerMenu = ({
                             </button>
                         </li>
                     ))}
-                    <li className='li-cv'>
+                    <li className='li-cv '>
                         <button className='btn-getcv button-CV-small' onClick={handleDownload}>
-                            GET CV
-                            <img className='cv-img-small' src={download} alt="Download CV"/>
+                                GET CV
+                                <img className='cv-img-small' src={download} alt="Download CV"/>
                         </button>
                     </li>
                 </ul>
+                <div className='socialmedia-small'><SocialMedia/></div>
             </div>
         </div>
     );

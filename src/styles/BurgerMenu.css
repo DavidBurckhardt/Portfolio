@@ -78,18 +78,52 @@
   
   .menu-content ul {
     list-style-type: none;
+    position: relative;
     padding: 0;
+    width: 100%;
+
   }
   
   .menu-content ul li {
     margin: 20px 0;
     font-family: 'Clesmont';
   }
+
+.button-list{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 20%;
+  height: 80%;
+}
+
+.button-CV-small{
+  margin-top: 10px;
+}
   
 .li-cv{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.socialmedia-small{
+  position: relative;
+  z-index: 10;
+  margin: 0; 
+  background-color: transparent;
+  height: 10%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-height: 580px){
+  .button-CV-small{
+    margin-top: 0px;
+  }
 }
 
 

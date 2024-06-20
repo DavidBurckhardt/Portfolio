@@ -43,34 +43,6 @@ button {
   border: none;
 }
 
-.bt-header::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: transparent;
-  transition: 0.5s;
-  transform-origin: center;
-}
-
-.bt-header::before {
-  content: "";
-  transform-origin: center;
-  position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: transparent;
-  transition: 0.5s;
-}
-
-.bt-header:hover::before, .bt-header:hover::after {
-  transform: scale(0);
-}
-
 .bt-header:hover {
   box-shadow: inset 0px 0px 25px #7f00b2;
 }
@@ -78,4 +50,15 @@ button {
 .bt-header-text{
   font-family: 'Anurati';
   font-size: large;
+}
+
+@media (max-height: 620px){
+  .bt-header{
+    width: auto;
+    padding: 1.1em 1.5em;
+    height: auto;
+    border-radius: 0.4em;
+    font-size: 11px;
+    margin: 0px 10px 0px 10px;
+  }
 }
