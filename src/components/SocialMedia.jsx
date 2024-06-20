@@ -26,7 +26,6 @@ export function SocialMedia(){
                     ></path>
                 </svg>
                 </a>
-                {/* <div className="tooltip">LinkedIn</div> */}
             </li>
             <li className="icon-content">
                 <a href="https://github.com/DavidBurckhardt" aria-label="GitHub" data-social="github">
@@ -70,7 +69,6 @@ export function SocialMedia(){
                     ></path>
                 </svg>
                 </a>
-                {/* <div className="tooltip">Instagram</div> */}
             </li>
             </ul>
 

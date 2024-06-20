@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: 'Meltbrown';
-  src: url('./assets/fonts/Meltbrown.ttf') format('opentype');
+  font-family: 'Khand';
+  src: url('./assets/fonts/Khand-Regular.ttf') format('opentype');
 }
 
 .scene-small{
@@ -42,6 +42,8 @@
 
   .body {
     position: relative;
+    margin-top: 10vh;
+    margin-bottom: 9vh;
     height: 81%;
     width: 100%;
     max-width: 100vw;

@@ -98,13 +98,13 @@ const Contact = forwardRef((props,ref) => {
                                 <span className="text-body-data" href="#">Mar del Plata, Buenos Aires, Arg.</span>
                             </div>
                     </div>
-                    <span className="text-body-title">SEND ME A MESSAGE</span>
                     <form className='info-form' action="#" autoComplete="off">
+                            <span className="text-body-title">SEND ME A MESSAGE</span>
                             <input type="text" name="from_name" placeholder="Name" className="campo" onChange={handleChange}/>
                             <input type="email" name="from_email" placeholder="Email" className="campo" onChange={handleChange}/>
                             <input type="subject" name="subject" placeholder="Subject" className="campo" onChange={handleChange}/>
                             <textarea name="message" placeholder="Message..." className="campo" onChange={handleChange}></textarea>
-                            <input type="submit" name="enviar" value="Enviar email" className="btn-submit-position btn-getcv" onClick={handleSubmit} />
+                            <input type="submit" name="enviar" value="Enviar email" className="btn-submit-position btn-getcv btn-getcv-contact" onClick={handleSubmit} />
                         </form>
                 </article>
             </section>

@@ -136,7 +136,8 @@
         background-color: transparent;
         width: 100%;
         height: 100%;
-
+        overflow: visible;
+        margin: 40px 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -145,7 +146,7 @@
 
     .proyects-small-title{
         position: relative;
-        flex: 0;
+        flex: 0.15;
         width: 100%;
         background-color: transparent;
     }
@@ -158,7 +159,7 @@
     }
 
     .proyects-title-text{
-        font-size: calc(11vw + 20px);
+        font-size: calc(10vw + 20px);
         color: white;
         text-shadow: 
         1px 1px 0px #ccc, 
@@ -176,4 +177,10 @@
         height: 80%;
     }
 
+}
+
+@media (max-height: 600px) {
+    .proyects-small-title{
+        margin-bottom: 50px;
+    }
 }

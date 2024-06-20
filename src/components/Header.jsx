@@ -3,10 +3,12 @@ import "../styles/Header.css";
 import "../styles/Button.css";
 import "../styles/GetCv.css";
 import download from "../assets/icons/download.svg"
-import { moverEje } from '../utils/MoverEjes';
+import { home, about, proyects, skills, contact } from '../utils/MoverEjes';
+import { scrollTo } from '../utils/Scroll';
 import BurgerMenu from "./BurgerMenu";
 import { saveAs } from 'file-saver';
 import CV from '../assets/CV/CV.pdf'; // Ruta al archivo PDF
+
 
 export default function Header(props){
 
@@ -22,114 +24,86 @@ export default function Header(props){
         contactRef,
     } = props;
 
-    const scrollTo = (ref) => {
-        if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                // Tu código aquí
-                setIsNavigating(false);
-              }, 4000);
-        }
-    };
-
-    function moveAndRotate(posX, posY, posZ) {
-        if (camera.current && window.innerWidth >= 1100) {
-            let { x, y, z } = camera.current.position;
-            moverEje(camera,'x',x,posX);
-            moverEje(camera,'y',y,posY);
-            moverEje(camera,'z',z,posZ);
-        }
+    const homeHeader = () => {
+        home(camera,setActive)
+        scrollTo(homeRef[0],setIsNavigating)
     }
 
-    const home = () => {
-        setIsNavigating(true)
-        moveAndRotate(-150, 0, 350)
-        setActive([true,false,false,false,false])
-        scrollTo(homeRef[0])
-    }
-
-    const aboutMe = () => {
-        setIsNavigating(true)
-        moveAndRotate(-450, 0, -30)
-        setActive([false,true,false,false,false])
-        scrollTo(aboutRef[0])
+    const aboutHeader = () => {
+        about(camera,setActive)
+        scrollTo(aboutRef[0],setIsNavigating)
     }
   
-      const proyects = () => {
-          setIsNavigating(true)
-          moveAndRotate(-200, 0, -200)
-          setActive([false,false,true,false,false])
-          scrollTo(proyectsRef[0])
+      const proyectsHeader = () => {
+          proyects(camera,setActive)
+          scrollTo(proyectsRef[0],setIsNavigating)
       }
   
-      const skills = () => {
-          setIsNavigating(true)
-          moveAndRotate(75, 50, 280)
-          setActive([false,false,false,true,false])
-          scrollTo(skillsRef[0])
+      const skillsHeader = () => {
+          skills(camera,setActive)
+          scrollTo(skillsRef[0],setIsNavigating)
       }
   
-      const contact = () => {
-          setIsNavigating(true)
-          moveAndRotate(165, 200, -122)
-          setActive([false,false,false,false,true])
-          scrollTo(contactRef[0])
+      const contactHeader = () => {
+          contact(camera,setActive)
+          scrollTo(contactRef[0],setIsNavigating)
       }
 
-      function getPosition() {
-        console.log(camera.current)
-        console.log(camera.current.position); // Verificar la cámara
-        console.log(camera.current.rotation); // Verificar la cámara
-    }
+    //   function getPosition() {
+    //     console.log(camera.current)
+    //     console.log(camera.current.position); // Verificar la cámara
+    //     console.log(camera.current.rotation); // Verificar la cámara
+    // }
 
     const handleDownload = () => {
         saveAs(CV, 'CV.pdf');
       };
 
-    return(
+    const navigationItems = [
+        { label: 'HOME', onClick: homeHeader },
+        { label: 'ABOUT', onClick: aboutHeader },
+        { label: 'PROYECTS', onClick: proyectsHeader },
+        { label: 'SKILLS', onClick: skillsHeader },
+        { label: 'CONTACT', onClick: contactHeader }
+    ];
+
+    return (
         <header className='header'>
-        <section className='title'>
-            <span className='title-name'>DAVID BURCKHARDT</span>
-        </section>
-        <section className='seccions'>
-            <button className={`bt-header ${active[0]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={home}>
-                <span className='bt-header-text'>HOME</span>
-            </button>
-            <button className={`bt-header ${active[1]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={aboutMe}>
-                <span className='bt-header-text'>ABOUT</span>
-            </button>
-            <button className={`bt-header ${active[2]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={proyects}>
-                <span className='bt-header-text'>PROYECTS</span>
-            </button>
-            <button className={`bt-header ${active[3]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={skills}>
-                <span className='bt-header-text'>SKILLS</span>
-            </button>
-            <button className={`bt-header ${active[4]? 'bt-activo' : 'bt-inactivo'}`} type="button" onClick={contact}>
-                <span className='bt-header-text'>CONTACT</span>
-            </button>
-            {/* <button className='bt-header' type="button" onClick={getPosition}>
-                GET POSITION
-            </button> */}
-        </section>
-        <section className='getCv'>
-            <button className='btn-getcv button-CV' onClick={handleDownload}>
-                GET CV
-                <img className='cv-img' src={download}/>
-            </button>
-        </section>
-        <section className="burger-menu">
-            <BurgerMenu 
-                active={active} 
-                setActive={setActive} 
-                homeRef={homeRef[1]} 
-                aboutRef={aboutRef[1]}
-                proyectsRef={proyectsRef[1]}
-                skillsRef={skillsRef[1]}
-                contactRef={contactRef[1]} 
-                setIsNavigating={setIsNavigating}
-                scrollTo={scrollTo}
-            ></BurgerMenu>
-        </section>
+            <section className='title'>
+                <span className='title-name'>DAVID BURCKHARDT</span>
+            </section>
+            <section className='seccions'>
+                {navigationItems.map((item, index) => (
+                    <button
+                        key={index}
+                        className={`bt-header ${active[index] ? 'bt-activo' : 'bt-inactivo'}`}
+                        type="button"
+                        onClick={item.onClick}
+                    >
+                        <span className='bt-header-text'>{item.label}</span>
+                    </button>
+                ))}
+            </section>
+            <section className='getCv'>
+                <button className='btn-getcv button-CV' onClick={handleDownload}>
+                    GET CV
+                    <img className='cv-img' src={download} alt="Download CV" />
+                </button>
+            </section>
+            <section className="burger-menu">
+                <BurgerMenu
+                    active={active}
+                    setActive={setActive}
+                    navigationRefs={{
+                        homeRef: homeRef[1],
+                        aboutRef: aboutRef[1],
+                        proyectsRef: proyectsRef[1],
+                        skillsRef: skillsRef[1],
+                        contactRef: contactRef[1]
+                    }}
+                    setIsNavigating={setIsNavigating}
+                />
+            </section>
         </header>
-    )
-}
+    );
+};
