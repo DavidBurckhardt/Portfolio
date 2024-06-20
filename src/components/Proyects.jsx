@@ -3,12 +3,12 @@ import { forwardRef } from "react";
 import Carrusel from "./Carrusel";
 
 import github from "../assets/icons/github.svg";
-import recipe from "../assets/icons/recipe.svg";
-import compiler from "../assets/icons/compiler.svg";
-import truck from "../assets/icons/truck.svg";
-import brain from "../assets/icons/brain.svg";
-import chatbot from "../assets/icons/chatbot.svg";
-import lemon from "../assets/icons/lemon.svg";
+import recipe from "../assets/icons/proyects/recipe.svg";
+import compiler from "../assets/icons/proyects/compiler.svg";
+import truck from "../assets/icons/proyects/truck.svg";
+import brain from "../assets/icons/proyects/brain.svg";
+import chatbot from "../assets/icons/proyects/chatbot.svg";
+import lemon from "../assets/icons/proyects/lemon.svg";
 
 const projectsData = [
     {

@@ -3,24 +3,24 @@ import { forwardRef } from "react";
 import CardAbout from "../components/CardAbout";
 
 // Logotipos de habilidades "hard skills"
-import reactLogo from "../assets/icons/skills/reactLogo.svg";
-import javaLogo from "../assets/icons/skills/javaLogo.svg";
-import htmlLogo from "../assets/icons/skills/htmlLogo.svg";
-import cssLogo from "../assets/icons/skills/cssLogo.svg";
-import pythonLogo from "../assets/icons/skills/pythonLogo.svg";
-import postgreLogo from "../assets/icons/skills/postgreLogo.svg";
-import jiraLogo from "../assets/icons/skills/jiraLogo.svg";
-import cplusplusLogo from "../assets/icons/skills/cplusplusLogo.svg";
-import mongoLogo from "../assets/icons/skills/mongoLogo.svg";
-import trelloLogo from "../assets/icons/skills/trelloLogo.svg";
+import reactLogo from "../assets/icons/hardSkills/reactLogo.svg";
+import javaLogo from "../assets/icons/hardSkills/javaLogo.svg";
+import htmlLogo from "../assets/icons/hardSkills/htmlLogo.svg";
+import cssLogo from "../assets/icons/hardSkills/cssLogo.svg";
+import pythonLogo from "../assets/icons/hardSkills/pythonLogo.svg";
+import postgreLogo from "../assets/icons/hardSkills/postgreLogo.svg";
+import jiraLogo from "../assets/icons/hardSkills/jiraLogo.svg";
+import cplusplusLogo from "../assets/icons/hardSkills/cplusplusLogo.svg";
+import mongoLogo from "../assets/icons/hardSkills/mongoLogo.svg";
+import trelloLogo from "../assets/icons/hardSkills/trelloLogo.svg";
 
 // Logotipos de habilidades blandas
-import responsability from "../assets/icons/responsability.svg";
-import teamwork from "../assets/icons/teamwork.svg";
-import adaptability from "../assets/icons/adaptability.svg";
-import communication from "../assets/icons/communication.svg";
-import problemSolution from "../assets/icons/problemSolution.svg";
-import timemanagment from "../assets/icons/timemanagment.svg";
+import responsability from "../assets/icons/softSkills/responsability.svg";
+import teamwork from "../assets/icons/softSkills/teamwork.svg";
+import adaptability from "../assets/icons/softSkills/adaptability.svg";
+import communication from "../assets/icons/softSkills/communication.svg";
+import problemSolution from "../assets/icons/softSkills/problemSolution.svg";
+import timemanagment from "../assets/icons/softSkills/timemanagment.svg";
 
 const hardSkillsData = [
     { name: "REACT", icon: reactLogo },
