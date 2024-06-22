@@ -69,7 +69,7 @@ export function home(camera,setActive){
 }
 
 export function about(camera,setActive){
-  moveAndRotate(camera,-450, 0, -30)
+  moveAndRotate(camera,-450, 0, -70)
   setActive([false,true,false,false,false])
 }
 

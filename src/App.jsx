@@ -5,13 +5,13 @@ import useIntersection from './components/useIntersection';
 import "./styles.css";
 import "./styles/CardProyect.css";
 import { home, about, proyects, skills, contact } from './utils/MoverEjes';
+import About from "./components/About"
+import Proyects from "./components/Proyects"
+import Skills from "./components/Skills"
+import Contact from "./components/Contact"
 
 // Lazy load the components
 const Home = lazy(() => import('./components/Home'));
-const About = lazy(() => import('./components/About'));
-const Proyects = lazy(() => import('./components/Proyects'));
-const Skills = lazy(() => import('./components/Skills'));
-const Contact = lazy(() => import('./components/Contact'));
 const Spinner = lazy(() => import('./components/Spinner'));
 const Scene = lazy(() => import('./components/Scene'));
 
@@ -81,9 +81,10 @@ export default function App() {
     };
 
     return (
-        <Suspense fallback={<Spinner />}>
             <div className='portfolio'>
-                <Scene onLoad={onLoad} />
+                <Suspense fallback={<Spinner />}>
+                    <Scene onLoad={onLoad} />
+                </Suspense>
                 <div className='container'>
                     <Header
                         active={active}
@@ -97,17 +98,15 @@ export default function App() {
                         contactRef={refContact}>
                     </Header>
                     <main className="body">
-                        
                             <Home ref={refHome} active={active}></Home>
                             <About ref={refAbout} active={active}></About>
                             <Proyects ref={refProyects} active={active}></Proyects>
                             <Skills ref={refSkills} active={active}></Skills>
                             <Contact ref={refContact} active={active}></Contact>
-                        
                     </main>
                     <Footer active={active}></Footer>
                 </div>
             </div>
-        </Suspense>
+
     );
 }
