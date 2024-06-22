@@ -191,6 +191,12 @@
 
 }
 
+@media (max-height:770px){
+    .proyects-small-body{
+        margin-top: 50px;
+    }
+}
+
 @media (max-height:700px){
     .proyects-small-body{
         margin-top: 100px;
