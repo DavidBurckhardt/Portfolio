@@ -56,7 +56,7 @@ const Proyects = forwardRef((props, ref) => {
         <>
             <section ref={ref[0]} className={`proyects`} >
                 <header className={`proyects-title ${active[2] ? 'proyects-animation-right-title' : 'proyects-animation-left-title'}`}>
-                    <span className='proyects-title-text'>PROYECTS</span>
+                    <span className='proyects-title-text'>PROJECTS</span>
                 </header>
                 <div className={`proyects-card ${active[2] ? 'proyects-animation-right' : 'proyects-animation-left'}`} >
                     {projectsData.map((project, index) => (

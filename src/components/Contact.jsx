@@ -104,7 +104,7 @@ const Contact = forwardRef((props,ref) => {
                             <input type="email" name="from_email" placeholder="Email" className="campo" onChange={handleChange}/>
                             <input type="subject" name="subject" placeholder="Subject" className="campo" onChange={handleChange}/>
                             <textarea name="message" placeholder="Message..." className="campo" onChange={handleChange}></textarea>
-                            <input type="submit" name="enviar" value="Enviar email" className="btn-submit-position btn-getcv btn-getcv-contact" onClick={handleSubmit} />
+                            <input type="submit" name="enviar" value="Send email" className="btn-submit-position btn-getcv btn-getcv-contact" onClick={handleSubmit} />
                         </form>
                 </article>
             </section>
