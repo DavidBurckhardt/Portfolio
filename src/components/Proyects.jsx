@@ -81,7 +81,7 @@ const Proyects = forwardRef((props, ref) => {
             </section>
             <section ref={ref[1]} className="proyects-small" >
                 <header className={`proyects-small-title proyects-title-text ${active[2] ? 'proyects-animation-right-title' : 'proyects-animation-left-title'}`}>
-                    <span className="title-proyects">PROYECTS</span>
+                    <span className="title-proyects">PROJECTS</span>
                 </header>
                 <article className={`proyects-small-body ${active[2] ? 'proyects-animation-right' : 'proyects-animation-left'}`}>
                     <Carrusel>
