@@ -25,7 +25,7 @@
 }
 
 .skills-animation-down-soft{
-    transform: translateY(0); /* Establecer la posición inicial */
+    transform: translateX(0); /* Establecer la posición inicial */
     animation: visibleNOSOFT 1.2s forwards ease-in;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .skills-animation-up-soft{
-    transform: translateY(100%); 
+    transform: translateX(100%); 
     animation: visibleSI 1.2s forwards ease-in;
 }
 
@@ -67,25 +67,31 @@
 
 @keyframes visibleNOSOFT {
     to {
-        transform: translateY(100%); 
+        transform: translateX(100%); 
         opacity: 0; /* Hacer que el elemento se desvanezca gradualmente */
     }
 }
 
-.skills-title{
-    position: absolute;
+.skills-title {
+    position: relative;
+    top: 80%; /* Opcional, puede eliminarse si no es necesario */
+    left: 12%;
+    transform: translateX(-50%); /* Mueve el elemento horizontalmente */
     color: white;
     text-shadow: 
-    1px 1px 0px #ccc, 
-    2px 2px 0px #ccc, 
-    3px 3px 0px #ccc, 
-    4px 4px 0px #ccc, 
-    5px 5px 0px #ccc, 
-    0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
-
+        1px 1px 0px #ccc, 
+        2px 2px 0px #ccc, 
+        3px 3px 0px #ccc, 
+        4px 4px 0px #ccc, 
+        5px 5px 0px #ccc, 
+        0px 0px 10px rgba(255, 255, 255, 1); /* Brillo sombreado */
+    background-color: transparent;
+    z-index: 100;
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Ajusta el tamaño según sea necesario */
 }
 
 .skills-title-text{
@@ -145,8 +151,8 @@
 }
 
 .card-skill{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
     
     display: flex;
@@ -197,7 +203,7 @@
     height: 50%;
     z-index: 10;
     background-color: transparent;
-    margin-left: 35%;
+    margin-left: 41%;
     bottom: 5%;
 
     display: flex;

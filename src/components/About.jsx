@@ -64,7 +64,7 @@ const About = forwardRef((props,ref) => {
                     <div className='language2'>
                         <span className='info-about-title'>ESPAÑOL</span>
                         <p className='info-about-subtitle'>
-                            NATIVO
+                            Nativo
                         </p>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ const About = forwardRef((props,ref) => {
                     <div className='language2'>
                         <span className='info-about-title'>ESPAÑOL</span>
                         <p className='info-about-subtitle'>
-                            NATIVO
+                            Nativo
                         </p>
                     </div>
                 </div>
