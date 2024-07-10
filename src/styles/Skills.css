@@ -245,8 +245,9 @@
   @media (max-width: 1600px) {
     
     .skills-title{
-        margin-top: 20%;
-        margin-left: 7%;
+        position: absolute;
+        top: 375%;
+        left: 8%;
     }
 
     .soft-skills-title{

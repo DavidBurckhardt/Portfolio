@@ -188,6 +188,11 @@
 
 /* Media Queries */
 @media (max-width: 1600px) {
+    
+    .home::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    
     .phrase-text {
         font-size: 95px;
     }

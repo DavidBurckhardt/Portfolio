@@ -235,7 +235,7 @@
         font-size: 30px; 
     }
     .container-form p{
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1.2;
         margin-bottom: 18px;
     }
@@ -247,6 +247,7 @@
     .container-form form .campo, textarea{
         padding: 15px 10px;
         font-size: 16x;
+        margin-bottom: 10px;
     }
 
     .container-form form textarea{

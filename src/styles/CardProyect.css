@@ -143,6 +143,7 @@
   }
 
   .content-box .see-more {
+    top:180px;
     cursor: pointer;
     height: 30px;
     width: 30px;
@@ -150,6 +151,7 @@
 
   .content-box .see-more .github-size{
     position: absolute;
+    top: 0;
     height: 30px;
     width: 30px;
   }
